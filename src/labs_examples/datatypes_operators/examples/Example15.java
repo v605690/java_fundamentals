@@ -13,3 +13,18 @@ class LtoD {
 
     }
 }
+
+class  LtooD {
+
+    public static void main(String[] args) {
+
+        long LongNum;
+        double DoubleNum;
+
+        LongNum = 14239846;
+        DoubleNum = LongNum;
+
+        System.out.println(LongNum * DoubleNum);
+
+    }
+}

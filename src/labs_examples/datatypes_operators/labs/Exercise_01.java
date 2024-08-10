@@ -18,6 +18,14 @@ public class Exercise_01 {
 
         // write code here
 
+        int i = 4;
+        double d = 253.33;
+        float f = 7.44f;
+        char c = 'f';
+        System.out.println(i);
+        System.out.println(d);
+        System.out.println(f);
+        System.out.println(c);
     }
 }
 

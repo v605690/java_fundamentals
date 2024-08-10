@@ -19,7 +19,27 @@ class RelationalOperators {
 
         // write your code below
 
-    }
+        String letters1 = "abcdefghijk";
+        String letters2 = "abcdefghijk";
 
+        if (letters1 == letters2) {
+            System.out.println("strings are equal");
+        }
+
+        if (b > a) {
+            System.out.println("b is greater than b");
+        }
+
+        int x = 33;
+        int y = 55;
+
+        if (x <= y) {
+            System.out.println("x is less than equal to y");
+        }
+
+        if (b >= a) {
+            System.out.println("b is great than equal to a");
+        }
+    }
 }
 

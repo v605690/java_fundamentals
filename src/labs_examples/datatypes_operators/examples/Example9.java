@@ -13,3 +13,16 @@ class VarInitDemo {
         }
     }
 }
+
+class ForLoop {
+    public static void main(String[] args) {
+        int x;
+
+        for (x = 0; x < 1; x++) {
+            int m = 0;
+            System.out.println("m is: " + m);
+            m  = 50;
+            System.out.println("m is now: " + m);
+        }
+    }
+}

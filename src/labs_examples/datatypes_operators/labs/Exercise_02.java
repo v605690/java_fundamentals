@@ -25,5 +25,13 @@ public class Exercise_02 {
 
         // write code here
 
+        int i = 10;
+        double d = i;
+        System.out.println(d);
+
+        double newDouble = 10.5;
+        int newInt = (int) newDouble;
+        System.out.println(newInt);
+
     }
 }

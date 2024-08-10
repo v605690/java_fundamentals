@@ -1,7 +1,7 @@
 package labs_examples.datatypes_operators.examples;
 
 // Demonstrate boolean values.
-class BoolDemo {
+class  BoolDemo {
     public static void main(String args[]) {
         boolean b;
 

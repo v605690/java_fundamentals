@@ -13,5 +13,8 @@ class CharArithDemo {
 
         ch = 90; // give ch the value Z
         System.out.println("ch is now " + ch);
+
+        ch = 58;
+        System.out.println("ch is now " + ch);
     }
 }
