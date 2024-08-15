@@ -26,7 +26,7 @@ class Vehicle {
 }
 
 class VehConsDemo {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         // construct complete vehicles
         Vehicle minivan = new Vehicle(7, 16, 21);

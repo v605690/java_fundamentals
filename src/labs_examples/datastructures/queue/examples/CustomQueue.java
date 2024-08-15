@@ -8,7 +8,7 @@ public class CustomQueue<V extends Comparable<V>> {
   // the underlying data structure
   // keep this private so it can't be modified
   // outside of this class
-  private CustomLinkedList list = new CustomLinkedList<V>();
+  private final CustomLinkedList list = new CustomLinkedList<V>();
 
   /**
    * Adds an item to the Queue

@@ -2,8 +2,8 @@ package labs_examples.arrays.examples;
 
 // Search an array using for-each style for.
 class Search {
-    public static void main(String args[]) {
-        int nums[] = { 6, 8, 3, 7, 5, 6, 1, 4 };
+    public static void main(String[] args) {
+        int[] nums = { 6, 8, 3, 7, 5, 6, 1, 4 };
         int val = 5;
         boolean found = false;
 

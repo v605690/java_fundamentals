@@ -2,7 +2,7 @@ package labs_examples.conditions_loops.examples;
 
 // Demonstrate the do-while loop.
 class DWDemo {
-    public static void main(String args[])
+    public static void main(String[] args)
             throws java.io.IOException {
 
         char ch;

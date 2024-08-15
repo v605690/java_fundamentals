@@ -5,10 +5,10 @@ package labs_examples.lambdas.examples.functional_interfaces;
  */
 public interface InterfaceExample {
 
-    public default void printMessage(){
+    default void printMessage(){
         System.out.println("Hey!");
     }
 
-    public int findPrimes(int a, int b);
+    int findPrimes(int a, int b);
 
 }

@@ -18,7 +18,7 @@ class Gen3<T> {
 
 // Demonstrate raw type.
 class RawDemo {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         // Create a Gen object for Integers.
         Gen3<Integer> iOb = new Gen3<Integer>(88);

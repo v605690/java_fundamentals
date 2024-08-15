@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 class ReadLines {
-    public static void main(String args[])
+    public static void main(String[] args)
             throws IOException
     {
         // create a BufferedReader using System.in

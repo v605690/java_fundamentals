@@ -2,11 +2,11 @@ package labs_examples.objects_classes_methods.examples.advanced;
 
 // Use ShowBits as a local class.
 class LocalClassDemo {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         // An inner class version of ShowBits.
         class ShowBits {
-            int numbits;
+            final int numbits;
 
             ShowBits(int n) {
                 numbits = n;

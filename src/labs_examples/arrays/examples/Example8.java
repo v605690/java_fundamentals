@@ -2,8 +2,8 @@ package labs_examples.arrays.examples;
 
 // Initialize a two-dimensional array.
 class Squares {
-    public static void main(String args[]) {
-        int sqrs[][] = {
+    public static void main(String[] args) {
+        int[][] sqrs = {
                 { 1, 1 },
                 { 2, 4 },
                 { 3, 9 },

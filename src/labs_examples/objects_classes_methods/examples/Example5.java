@@ -12,7 +12,7 @@ class Vehicle_4_5 {
 }
 
 class RetMeth {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         Vehicle_4_5 minivan = new Vehicle_4_5();
         Vehicle_4_5 sportscar = new Vehicle_4_5();
 

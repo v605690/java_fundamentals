@@ -2,9 +2,9 @@ package labs_examples.packages.examples.package_01;
 
 
 public class Book2 {
-    private String title;
-    private String author;
-    private int pubDate;
+    private final String title;
+    private final String author;
+    private final int pubDate;
 
     // Now public.
     public Book2(String t, String a, int d) {

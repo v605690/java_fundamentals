@@ -3,7 +3,7 @@ package labs_examples.arrays.examples;
 //for more 2D array examples see: labs_examples.datatypes_operators/examples/labs_examples.arrays
 
 class MultiDArray {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         int t, i;
         // declare and initialize array
         int[][] table = new int[3][4];

@@ -17,7 +17,7 @@ class StaticBlock {
 }
 
 class SDemo3 {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         StaticBlock ob = new StaticBlock("Inside Constructor");
 
         System.out.println("Square root of 2 is " +

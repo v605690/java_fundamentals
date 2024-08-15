@@ -31,7 +31,7 @@ class Priority implements Runnable {
                 System.out.println("In " + currentName);
             }
 
-        } while(stop == false && count < 10000000);
+        } while(!stop && count < 10000000);
         stop = true;
 
         System.out.println("\n" + thrd.getName() +
@@ -40,7 +40,7 @@ class Priority implements Runnable {
 }
 
 class PriorityDemo {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         Priority mt1 = new Priority("High Priority");
         Priority mt2 = new Priority("Low Priority");
 

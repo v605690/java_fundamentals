@@ -2,7 +2,7 @@ package labs_examples.generics.examples;
 
 // A generic, fixed-size queue class.
 class GenQueue<T> implements IGenQ<T> {
-    private T q[]; // this array holds the queue
+    private final T[] q; // this array holds the queue
     private int putloc, getloc; // the put and get indices
 
     // Construct an empty queue with the given array.

@@ -5,12 +5,12 @@ package videos_source_code.oop.polymorphism;
  */
 public interface MotorizedTransport {
 
-    public boolean start();
+    boolean start();
 
-    public void stop();
+    void stop();
 
-    public void accelerate(double mph);
+    void accelerate(double mph);
 
-    public void decelerate(double mph);
+    void decelerate(double mph);
 
 }

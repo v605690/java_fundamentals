@@ -2,7 +2,7 @@ package labs_examples.conditions_loops.examples;
 
 // Use continue with a label.
 class ContToLabel {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         outerloop:
         for(int i=1; i < 10; i++) {

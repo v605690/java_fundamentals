@@ -2,7 +2,7 @@ package labs_examples.arrays.examples;
 
 // Use XOR to encode and decode a message.
 class Encode {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         String msg = "This is a test";
         String encmsg = "";
         String decmsg = "";

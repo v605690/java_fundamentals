@@ -29,7 +29,7 @@ class MyThread2 implements Runnable {
 }
 
 class UseThreadsImproved {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         System.out.println("Main thread starting.");
 
         MyThread2 mt = new MyThread2("Child #1");

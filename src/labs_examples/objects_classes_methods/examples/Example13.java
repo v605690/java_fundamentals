@@ -24,7 +24,7 @@ class FDemo {
 }
 
 class Finalize {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         int count;
 
         FDemo ob = new FDemo(0);

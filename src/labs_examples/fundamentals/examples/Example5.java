@@ -6,7 +6,7 @@ package labs_examples.fundamentals.examples;
   Call this file IfDemo.java.
 */
 class IfDemo {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         int a, b, c;
 
         a = 2;

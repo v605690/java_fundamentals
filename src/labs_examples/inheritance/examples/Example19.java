@@ -21,7 +21,7 @@ class Sub2 extends Sup {
 }
 
 class DynDispDemo {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         Sup superOb = new Sup();
         Sub1 subOb1 = new Sub1();
         Sub2 subOb2 = new Sub2();

@@ -2,7 +2,7 @@ package labs_examples.conditions_loops.examples;
 
 // Guess the letter game, 3rd version.
 class Guess3 {
-    public static void main(String args[])
+    public static void main(String[] args)
             throws java.io.IOException {
 
         char ch, answer = 'K';

@@ -2,7 +2,7 @@ package labs_examples.conditions_loops.examples;
 
 // Read a character from the keyboard.
 class KbIn {
-    public static void main(String args[])
+    public static void main(String[] args)
             throws java.io.IOException {
 
         char ch;

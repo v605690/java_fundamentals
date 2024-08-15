@@ -15,7 +15,7 @@ count keeps getting reset to 0
 Update- does not compile when i is reinitialized
 */
 class NestVar {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         int count;
 
         for(count = 0; count < 10; count = count+1) {

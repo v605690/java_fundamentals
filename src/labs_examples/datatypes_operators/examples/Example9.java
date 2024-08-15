@@ -2,7 +2,7 @@ package labs_examples.datatypes_operators.examples;
 
 // Demonstrate lifetime of a variable.
 class VarInitDemo {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         int x;
 
         for(x = 0; x < 3; x++) {

@@ -2,7 +2,7 @@ package labs_examples.arrays.examples;
 
 // Display the bits within a byte.
 class ShowBits_2 {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         int t;
         byte val;
 

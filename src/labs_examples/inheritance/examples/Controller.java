@@ -16,7 +16,7 @@ public class Controller {
         willy.setSound("click click click");
 
 
-        System.out.println(willy.toString());
+        System.out.println(willy);
 
     }
 }

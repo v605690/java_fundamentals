@@ -6,9 +6,9 @@ package labs_examples.sorting_algorithms.examples;
 public class MergeSort {
 
     // Driver method
-    public static void main(String args[])
+    public static void main(String[] args)
     {
-        int arr[] = {12, 11, 13, 5, 6, 7};
+        int[] arr = {12, 11, 13, 5, 6, 7};
 
         System.out.println("Given Array");
         printArray(arr);
@@ -21,7 +21,7 @@ public class MergeSort {
     }
 
     // Main function that sorts nums[left..right] using merge()
-    void sort(int nums[], int left, int right) {
+    void sort(int[] nums, int left, int right) {
         if (left < right)
         {
             // Find the middle point
@@ -39,19 +39,18 @@ public class MergeSort {
     // Merges two subarrays of nums[].
     // First subarray is nums[left ... middle]
     // Second subarray is nums[middle+1 ... right]
-    void merge(int nums[], int left, int middle, int right)
+    void merge(int[] nums, int left, int middle, int right)
     {
         // Find sizes of two subarrays to be merged
         int n1 = middle - left + 1;
         int n2 = right - middle;
 
         /* Create temp arrays */
-        int L[] = new int [n1];
-        int R[] = new int [n2];
+        int[] L = new int [n1];
+        int[] R = new int [n2];
 
         /*Copy data to temp arrays*/
-        for (int i=0; i<n1; ++i)
-            L[i] = nums[left + i];
+        System.arraycopy(nums, left + 0, L, 0, n1);
         for (int j=0; j<n2; ++j)
             R[j] = nums[middle + 1+ j];
 

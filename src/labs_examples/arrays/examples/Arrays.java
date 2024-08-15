@@ -4,9 +4,9 @@ package labs_examples.arrays.examples;
 
 // Find the minimum and maximum values in an array.
 class Arrays {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         // declare and initialize array size 10
-        int nums[] = new int[10];
+        int[] nums = new int[10];
         int min, max;
 
         // populate array

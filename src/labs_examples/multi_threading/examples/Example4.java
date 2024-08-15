@@ -30,7 +30,7 @@ class MyThread4 implements Runnable {
 }
 
 class MoreThreads {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         System.out.println("Main thread starting.");
 
         MyThread4 mt1 = new MyThread4("Child #1");

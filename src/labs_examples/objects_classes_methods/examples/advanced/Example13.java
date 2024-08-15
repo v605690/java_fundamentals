@@ -23,7 +23,7 @@ class Summation {
 }
 
 class SumDemo {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         Summation s1 = new Summation(5, 100, 200);
         Summation s2 = new Summation(s1);
 

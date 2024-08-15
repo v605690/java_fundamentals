@@ -77,7 +77,7 @@ class MyThread8 implements Runnable {
 }
 
 class ThreadCom {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         TickTock tt = new TickTock();
         MyThread8 mt1 = new MyThread8("Tick", tt);
         MyThread8 mt2 = new MyThread8("Tock", tt);

@@ -4,7 +4,7 @@ package labs_examples.conditions_loops.examples;
    A simple help system.
 */
 class Help {
-    public static void main(String args[])
+    public static void main(String[] args)
             throws java.io.IOException {
 
         char choice;

@@ -2,9 +2,9 @@ package labs_examples.arrays.examples;
 
 // Demonstrate a two-dimensional array.
 class TwoD {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         int t, i;
-        int table[][] = new int[3][4];
+        int[][] table = new int[3][4];
 
         for(t=0; t < 3; t++) {
 

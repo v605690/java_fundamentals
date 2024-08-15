@@ -33,7 +33,7 @@ class TwoGen<T, V> {
 
 // Demonstrate TwoGen.
 class SimpGen {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         TwoGen<Integer, String> tgObj =
                 new TwoGen<Integer, String>(88, "Generics");

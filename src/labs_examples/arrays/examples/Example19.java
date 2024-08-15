@@ -2,8 +2,8 @@ package labs_examples.arrays.examples;
 
 // Demonstrate String labs_examples.arrays.
 class StringArrays {
-    public static void main(String args[]) {
-        String strs[] = { "This", "is", "a", "test." };
+    public static void main(String[] args) {
+        String[] strs = { "This", "is", "a", "test." };
 
         System.out.println("Original array: ");
         for(String s : strs)

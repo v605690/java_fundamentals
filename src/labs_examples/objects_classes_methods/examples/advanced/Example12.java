@@ -29,7 +29,7 @@ class MyClass3 {
 }
 
 class OverloadConsDemo {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         MyClass3 t1 = new MyClass3();
         MyClass3 t2 = new MyClass3(88);
         MyClass3 t3 = new MyClass3(17.23);

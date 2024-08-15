@@ -15,7 +15,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 class CopyFile {
-    public static void main(String args[]) throws IOException
+    public static void main(String[] args) throws IOException
     {
         int i;
 

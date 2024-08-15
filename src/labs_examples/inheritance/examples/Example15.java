@@ -40,7 +40,7 @@ class TwoDShape8 {
 
 // A subclass of TwoDShape for triangles.
 class Triangle8 extends TwoDShape8 {
-    private String style;
+    private final String style;
 
     // A default constructor.
     Triangle8() {

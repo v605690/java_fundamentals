@@ -5,7 +5,7 @@ package labs_examples.conditions_loops.examples;
     do-while to process a menu selection.
 */
 class Help2 {
-    public static void main(String args[])
+    public static void main(String[] args)
             throws java.io.IOException {
         char choice, ignore;
 

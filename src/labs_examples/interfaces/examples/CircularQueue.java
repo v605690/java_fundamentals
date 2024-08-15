@@ -2,7 +2,7 @@ package labs_examples.interfaces.examples;
 
 // A circular queue.
 class CircularQueue implements ICharQ {
-    private char q[]; // this array holds the queue
+    private final char[] q; // this array holds the queue
     private int putloc, getloc; // the put and get indices
 
     // Construct an empty queue given its size.

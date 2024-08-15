@@ -6,7 +6,7 @@ class UseBoundedWildcard {
     static void test(Gen<? extends A> o) {
         // ...
     }
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         A a = new A();
         B b = new B();
         C c = new C();

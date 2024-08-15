@@ -3,7 +3,7 @@ package labs_examples.arrays.examples;
 // Use a string to control a switch statement.
 
 class StringSwitch {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         String command = "cancel";
 

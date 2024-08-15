@@ -2,8 +2,8 @@ package labs_examples.arrays.examples;
 
 // Use array initializers.
 class MinMax2 {
-    public static void main(String args[]) {
-        int nums[] = { 99, -10, 100123, 18, -978,
+    public static void main(String[] args) {
+        int[] nums = { 99, -10, 100123, 18, -978,
                 5623, 463, -9, 287, 49 };
 
 

@@ -5,7 +5,7 @@ package labs_examples.arrays.examples;
 */
 
 class Queue {
-    private char q[];               // this array holds the queue
+    private final char[] q;               // this array holds the queue
     private int putloc, getloc;     // the put and get indices
 
     Queue(int size) {
@@ -37,7 +37,7 @@ class Queue {
 
 // Demonstrate the Queue class.
 class QDemo {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         Queue bigQ = new Queue(100);
         Queue smallQ = new Queue(4);
         char ch;

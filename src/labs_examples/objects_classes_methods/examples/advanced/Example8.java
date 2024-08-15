@@ -12,13 +12,13 @@ class Err {
 }
 
 class ErrorInfo {
-    String msgs[] = {
+    String[] msgs = {
             "Output Error",
             "Input Error",
             "Disk Full",
             "Index Out-Of-Bounds"
     };
-    int howbad[] = { 3, 3, 2, 4 };
+    int[] howbad = { 3, 3, 2, 4 };
 
     Err getErrorInfo(int i) {
         if(i >=0 & i < msgs.length)
@@ -29,7 +29,7 @@ class ErrorInfo {
 }
 
 class ErrInfo {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         ErrorInfo err = new ErrorInfo();
         Err e;
 

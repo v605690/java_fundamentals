@@ -33,7 +33,7 @@ class Triangle3 extends TwoDShape3 {
 }
 
 class Shapes2 {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         Triangle3 t1 = new Triangle3();
         Triangle3 t2 = new Triangle3();
 

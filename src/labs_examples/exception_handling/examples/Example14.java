@@ -3,10 +3,10 @@ package labs_examples.exception_handling.examples;
 // Use the multi-catch feature.  Note: This code requires JDK 7 or
 // later to compiler.
 class MultiCatch {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         int a=88, b=0;
         int result;
-        char chrs[] = { 'A', 'B', 'C' };
+        char[] chrs = { 'A', 'B', 'C' };
 
         for(int i=0; i < 2; i++) {
             try {

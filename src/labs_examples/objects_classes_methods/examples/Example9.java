@@ -57,16 +57,13 @@ class Help {
     }
 
     boolean isValid(int ch) {
-        if(ch < '1' | ch > '7' & ch != 'q')
-            return false;
-        else
-            return true;
+        return !(ch < '1' | ch > '7' & ch != 'q');
     }
 
 }
 
 class HelpClassController {
-    public static void main(String args[])
+    public static void main(String[] args)
             throws java.io.IOException {
 
         char choice, ignore;

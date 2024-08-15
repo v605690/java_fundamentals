@@ -5,10 +5,10 @@ package labs_examples.input_output.examples;
 import java.io.IOException;
 
 class ReadBytes {
-    public static void main(String args[])
+    public static void main(String[] args)
             throws IOException {
 
-        byte data[] = new byte[11];
+        byte[] data = new byte[11];
 
         System.out.println("Enter some characters.");
 

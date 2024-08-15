@@ -19,16 +19,16 @@ class LogicalOperators {
 
         // write your code below
 
-        if ((a == true && b) == false) {
+        if (!(a && b)) {
             System.out.println("Above logical and will print");
         }
 
-        if (a == false || b == false) {
+        if (!a || !b) {
             System.out.println("Logical or will print");
         }
 
-        boolean b1 = !(b == true);
-        if (!(b == true)) {
+        boolean b1 = !(b);
+        if (!(b)) {
             System.out.println("This is true");
         }
 

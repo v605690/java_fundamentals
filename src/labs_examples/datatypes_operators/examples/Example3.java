@@ -2,7 +2,7 @@ package labs_examples.datatypes_operators.examples;
 
 // Character variables can be handled like integers.
 class CharArithDemo {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         char ch;
 
         ch = 'X';

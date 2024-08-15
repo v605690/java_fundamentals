@@ -30,7 +30,7 @@ class MyThread3 extends Thread {
 }
 
 class ExtendThread {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         System.out.println("Main thread starting.");
 
         MyThread3 mt = new MyThread3("Child #1");

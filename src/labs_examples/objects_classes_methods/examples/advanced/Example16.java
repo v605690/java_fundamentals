@@ -11,7 +11,7 @@ class StaticDemo {
 }
 
 class SDemo {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         StaticDemo ob1 = new StaticDemo();
         StaticDemo ob2 = new StaticDemo();
 

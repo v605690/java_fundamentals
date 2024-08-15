@@ -8,7 +8,7 @@ package labs_examples.input_output.examples;
 import java.io.*;
 
 class RWData {
-    public static void main(String args[])
+    public static void main(String[] args)
     {
         int i = 10;
         double d = 1023.56;

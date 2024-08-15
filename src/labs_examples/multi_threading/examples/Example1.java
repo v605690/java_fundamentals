@@ -27,7 +27,7 @@ class MyThread implements Runnable {
 }
 
 class UseThreads {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         System.out.println("Main thread starting.");
 
         // First, construct a MyThread object.

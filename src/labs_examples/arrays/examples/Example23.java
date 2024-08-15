@@ -2,8 +2,8 @@ package labs_examples.arrays.examples;
 
 // A simple automated telphone directory.
 class Phone {
-    public static void main(String args[]) {
-        String numbers[][] = {
+    public static void main(String[] args) {
+        String[][] numbers = {
                 { "Tom", "555-3322" },
                 { "Mary", "555-8976" },
                 { "Jon", "555-1037" },

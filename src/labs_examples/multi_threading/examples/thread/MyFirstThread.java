@@ -1,7 +1,7 @@
 package labs_examples.multi_threading.examples.thread;
 
 class ExampleController {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         System.out.println("** Main Thread Start **");
 
         MyFirstThread thread1 = new MyFirstThread("First Thread");

@@ -5,7 +5,7 @@ package labs_examples.multi_threading.examples;
 */
 
 class UseMain {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         Thread thrd;
 
         // Get the main thread.

@@ -9,7 +9,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 class DtoS {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         String s;
 
         String filePath = "src/labs_examples/input_output/files/KtoD.txt";

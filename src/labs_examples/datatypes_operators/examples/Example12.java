@@ -2,7 +2,7 @@ package labs_examples.datatypes_operators.examples;
 
 // Demonstrate the relational and logical operators.
 class RelLogOps {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         int i, j;
         boolean b1, b2;
 

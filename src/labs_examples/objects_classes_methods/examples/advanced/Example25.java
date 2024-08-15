@@ -36,7 +36,7 @@ class VarArgs3 {
         System.out.println();
     }
 
-    public static void main(String args[])
+    public static void main(String[] args)
     {
         vaTest(1, 2, 3);
         vaTest("Testing: ", 10, 20);

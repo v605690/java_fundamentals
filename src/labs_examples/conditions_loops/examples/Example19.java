@@ -2,7 +2,7 @@ package labs_examples.conditions_loops.examples;
 
 // Declare loop control variable inside the for.
 class ForVar {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         int sum = 0;
         int fact = 1;
 

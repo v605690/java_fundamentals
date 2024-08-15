@@ -6,7 +6,7 @@ package labs_examples.datatypes_operators.examples;
    to reach you.
 */
 class Sound {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         double dist;
 
         dist = 7.2 * 1100;

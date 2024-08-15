@@ -31,11 +31,7 @@ public class BuiltInFunctionalInterfaces {
         System.out.println(length.test("programming is so cool!"));
 
         BiPredicate<Integer, String> longerThan = (i, s) -> {
-            if (s.length() > i){
-                return true;
-            } else {
-                return false;
-            }
+            return s.length() > i;
         };
 
         System.out.println(longerThan.test(5, "hello world"));
@@ -50,7 +46,7 @@ public class BuiltInFunctionalInterfaces {
         Function<Long, Double> half = (a) -> a / 2.0;
 
         // call the apply() method on the Function interface
-        System.out.println(half.apply(46545167416754l));
+        System.out.println(half.apply(46545167416754L));
     }
 
     // Represents a function that accepts two arguments and produces a result.

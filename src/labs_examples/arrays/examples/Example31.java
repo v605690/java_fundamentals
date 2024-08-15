@@ -2,7 +2,7 @@ package labs_examples.arrays.examples;
 
 // Prevent a division by zero using the ?.
 class NoZeroDiv {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         int result;
 
         for(int i = -5; i < 6; i++) {

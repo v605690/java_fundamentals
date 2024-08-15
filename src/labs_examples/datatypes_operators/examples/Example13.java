@@ -2,7 +2,7 @@ package labs_examples.datatypes_operators.examples;
 
 // Demonstrate the short-circuit operators.
 class SCops {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         int n, d, q;
 
         n = 10;

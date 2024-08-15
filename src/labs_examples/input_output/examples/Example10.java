@@ -8,9 +8,9 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 
 class RandomAccessDemo {
-    public static void main(String args[])
+    public static void main(String[] args)
     {
-        double data[] = { 19.4, 10.1, 123.54, 33.0, 87.9, 74.25 };
+        double[] data = { 19.4, 10.1, 123.54, 33.0, 87.9, 74.25 };
         double d;
 
         String filePath = "src/labs_examples/input_output/files/random.dat";
@@ -41,7 +41,7 @@ class RandomAccessDemo {
             // Now, read every other value.
             System.out.println("Here is every other value: ");
             for(int i=0; i < data.length; i+=2) {
-                raf.seek(8 * i); // seek to ith double
+                raf.seek(8L * i); // seek to ith double
                 d = raf.readDouble();
                 System.out.print(d + " ");
             }

@@ -7,7 +7,7 @@ package labs_examples.enumerations.examples;
 enum TrafficLightColor {
     RED(12000), GREEN(10000), YELLOW(2000);
 
-    private int delay;
+    private final int delay;
 
     TrafficLightColor(int d) {
         delay = d;
@@ -18,7 +18,7 @@ enum TrafficLightColor {
 
 // A computerized traffic light.
 class TrafficLightSimulator implements Runnable {
-    private Thread thrd; // holds the thread that runs the simulation
+    private final Thread thrd; // holds the thread that runs the simulation
     private TrafficLightColor tlc; // holds the current traffic light color
     boolean stop = false; // set to true to stop the simulation
     boolean changed = false; // true when the light has changed
@@ -90,7 +90,7 @@ class TrafficLightSimulator implements Runnable {
 }
 
 class TrafficLightDemo {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         TrafficLightSimulator tl =
                 new TrafficLightSimulator(TrafficLightColor.GREEN);
 

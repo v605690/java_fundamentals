@@ -53,7 +53,7 @@ class TwoDShape9 {
 
 // A subclass of TwoDShape for triangles.
 class Triangle9 extends TwoDShape9 {
-    private String style;
+    private final String style;
 
     // A default constructor.
     Triangle9() {
@@ -114,8 +114,7 @@ class Rectangle2 extends TwoDShape9 {
     }
 
     boolean isSquare() {
-        if(getWidth() == getHeight()) return true;
-        return false;
+        return getWidth() == getHeight();
     }
 
     // Override area() for Rectangle2.
@@ -125,8 +124,8 @@ class Rectangle2 extends TwoDShape9 {
 }
 
 class DynShapes {
-    public static void main(String args[]) {
-        TwoDShape9 shapes[] = new TwoDShape9[5];
+    public static void main(String[] args) {
+        TwoDShape9[] shapes = new TwoDShape9[5];
 
         shapes[0] = new Triangle9("outlined", 8.0, 12.0);
         shapes[1] = new Rectangle2(10);

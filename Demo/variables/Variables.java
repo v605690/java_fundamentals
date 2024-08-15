@@ -11,9 +11,9 @@ public class Variables {
         Person oldPerson = new Person("Lisa", 65);
         Person youngPerson = new Person("David", 23);
 
-        System.out.println(newPerson.toString());
-        System.out.println(oldPerson.toString());
-        System.out.println(youngPerson.toString());
+        System.out.println(newPerson);
+        System.out.println(oldPerson);
+        System.out.println(youngPerson);
     }
 
     public static int multiply(double a, double b) {

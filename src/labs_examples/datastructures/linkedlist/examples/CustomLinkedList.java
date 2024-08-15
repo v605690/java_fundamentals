@@ -229,9 +229,6 @@ public class CustomLinkedList<T extends Comparable<T>> {
   }
 
   public boolean isEmpty(){
-    if (this.head == null)
-      return true;
-    else
-      return false;
+      return this.head == null;
   }
 }

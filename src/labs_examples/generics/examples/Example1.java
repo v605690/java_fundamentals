@@ -27,7 +27,7 @@ class Gen<T> {
 
 // Demonstrate the generic class.
 class GenDemo {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         // Create a Gen reference for Integers.
         Gen<Integer> iOb;
 

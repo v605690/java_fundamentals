@@ -16,7 +16,7 @@ class Overload3 {
 }
 
 class TypeConv2 {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         Overload3 ob = new Overload3();
 
         int i = 10;

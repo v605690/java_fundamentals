@@ -2,7 +2,7 @@ package labs_examples.conditions_loops.examples;
 
 // Show square roots of 1 to 99 and the rounding error.
 class SqrRoot {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         double num, sroot, rerr;
 
         for(num = 1.0; num < 100.0; num++) {

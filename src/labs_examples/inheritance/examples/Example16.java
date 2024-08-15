@@ -29,7 +29,7 @@ class B2 extends A2 {
 }
 
 class Override {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         B2 subOb = new B2(1, 2, 3);
 
         subOb.show(); // this calls show() in B

@@ -2,7 +2,7 @@ package labs_examples.conditions_loops.examples;
 
 // Demonstrate an if-else-if ladder.
 class Ladder {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         int x;
 
         for(x=0; x<6; x++) {

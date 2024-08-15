@@ -2,7 +2,7 @@ package labs_examples.arrays.examples;
 
 // Demonstrate the bitwise NOT.
 class NotDemo {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         byte b = -34;
 
         for(int t=128; t > 0; t = t/2) {

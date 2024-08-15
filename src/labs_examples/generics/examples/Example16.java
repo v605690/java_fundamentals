@@ -4,9 +4,9 @@ package labs_examples.generics.examples;
     Demonstrate a generic queue class.
 */
 class GenQDemo {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         // Create in integer queue.
-        Integer iStore[] = new Integer[10];
+        Integer[] iStore = new Integer[10];
         GenQueue<Integer> q = new GenQueue<Integer>(iStore);
 
         Integer iVal;
@@ -38,7 +38,7 @@ class GenQDemo {
         System.out.println();
 
         // Create a Double queue.
-        Double dStore[] = new Double[10];
+        Double[] dStore = new Double[10];
         GenQueue<Double> q2 = new GenQueue<Double>(dStore);
 
         Double dVal;

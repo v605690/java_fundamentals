@@ -2,7 +2,7 @@ package labs_examples.arrays.examples;
 
 // Lowercase letters.
 class LowCase {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         char ch;
 
         for(int i=0; i < 10; i++) {

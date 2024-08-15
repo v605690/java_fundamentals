@@ -14,12 +14,12 @@ class GenericMethodDemo {
         return true; // contents of labs_examples.arrays are equivalent
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
-        Integer nums[] = { 1, 2, 3, 4, 5 };
-        Integer nums2[] = { 1, 2, 3, 4, 5 };
-        Integer nums3[] = { 1, 2, 7, 4, 5 };
-        Integer nums4[] = { 1, 2, 7, 4, 5, 6 };
+        Integer[] nums = { 1, 2, 3, 4, 5 };
+        Integer[] nums2 = { 1, 2, 3, 4, 5 };
+        Integer[] nums3 = { 1, 2, 7, 4, 5 };
+        Integer[] nums4 = { 1, 2, 7, 4, 5, 6 };
 
         if(arraysEqual(nums, nums))
             System.out.println("nums equals nums");
@@ -34,7 +34,7 @@ class GenericMethodDemo {
             System.out.println("nums equals nums4");
 
         // Create an array of Doubles
-        Double dvals[] = { 1.1, 2.2, 3.3, 4.4, 5.5 };
+        Double[] dvals = { 1.1, 2.2, 3.3, 4.4, 5.5 };
 
         // This won't compile because nums and dvals
         // are not of the same type.

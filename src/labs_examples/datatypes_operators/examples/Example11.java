@@ -2,7 +2,7 @@ package labs_examples.datatypes_operators.examples;
 
 // Demonstrate the % operator.
 class ModDemo {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         int iresult, irem;
         double dresult, drem;
 

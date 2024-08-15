@@ -2,7 +2,7 @@ package labs_examples.interfaces.examples;
 
 // Use the default method.
 class DefaultMethodDemo {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         MyIFImp obj = new MyIFImp();
 

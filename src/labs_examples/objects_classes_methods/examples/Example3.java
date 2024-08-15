@@ -22,7 +22,7 @@ class Vehicle_4_3 {
 }
 
 class AddMeth {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         Vehicle_4_3 minivan = new Vehicle_4_3();
         Vehicle_4_3 sportscar = new Vehicle_4_3();
 

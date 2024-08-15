@@ -2,7 +2,7 @@ package labs_examples.datatypes_operators.examples;
 
 // *** This program will not compile. ***
 class LtoD_2 {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         long L;
         double D;
 

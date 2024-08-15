@@ -4,8 +4,8 @@ package labs_examples.objects_classes_methods.examples.advanced;
    runtime errors.
  */
 class FailSoftArray {
-    private int a[]; // reference to array
-    private int errval; // value to return if get() fails
+    private final int[] a; // reference to array
+    private final int errval; // value to return if get() fails
 
     public int length; // length is public
 
@@ -35,14 +35,13 @@ class FailSoftArray {
 
     // Return true if index is within bounds.
     private boolean indexOK(int index) {
-        if(index >= 0 & index < length) return true;
-        return false;
+        return index >= 0 & index < length;
     }
 }
 
 // Demonstrate the fail-soft array.
 class FSDemo {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         FailSoftArray fs = new FailSoftArray(5, -1);
         int x;
 
@@ -55,7 +54,7 @@ class FSDemo {
             x = fs.get(i);
             if(x != -1) System.out.print(x + " ");
         }
-        System.out.println("");
+        System.out.println();
 
         // now, handle failures
         System.out.println("\nFail with error reports.");

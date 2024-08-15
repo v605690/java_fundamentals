@@ -27,7 +27,7 @@ class NumericFns2<T extends Number> {
 
 // Demonstrate NumericFns.
 class BoundsDemo {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         NumericFns2<Integer> iOb =
                 new NumericFns2<Integer>(5);

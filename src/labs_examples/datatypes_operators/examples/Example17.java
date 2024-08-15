@@ -2,7 +2,7 @@ package labs_examples.datatypes_operators.examples;
 
 // Demonstrate casting.
 class CastDemo {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         double x, y;
         byte b;
         int i;

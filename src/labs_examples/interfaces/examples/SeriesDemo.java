@@ -1,7 +1,7 @@
 package labs_examples.interfaces.examples;
 
 class SeriesDemo {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         ByTwos ob = new ByTwos();
 
         for(int i=0; i < 5; i++)
