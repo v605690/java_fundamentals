@@ -8,4 +8,12 @@ package labs_examples.conditions_loops.labs;
  */
 
 public class Exercise_08 {
+    public static void main(String[] args) {
+        int x = 1000;
+
+        do {
+            System.out.println("counting backwards: " + x);
+            x--;
+        } while(x >= 0);
+    }
 }
