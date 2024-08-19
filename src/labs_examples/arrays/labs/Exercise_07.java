@@ -1,5 +1,9 @@
 package labs_examples.arrays.labs;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+
 /**
  *  ArrayLists
  *
@@ -10,4 +14,21 @@ package labs_examples.arrays.labs;
  *
  */
 public class Exercise_07 {
+    public static void main(String[] args) {
+        ArrayList<String> computerPartsList = new ArrayList();
+        computerPartsList.add("CPU");
+        computerPartsList.add("Memory");
+        computerPartsList.add("Mother Board");
+        computerPartsList.add("GPU");
+        computerPartsList.add("Hard Drive");
+        computerPartsList.add("Monitor");
+        computerPartsList.add("Keyboard & Mouse");
+
+        if (!computerPartsList.isEmpty()) {
+            Collections.sort(computerPartsList);
+            for (String c : computerPartsList) {
+                System.out.println(c + " ");
+            }
+        }
+    }
 }
