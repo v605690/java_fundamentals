@@ -9,5 +9,19 @@ package labs_examples.arrays.labs;
  */
 
 public class Exercise_04 {
+    public static void main(String[] args) {
 
+        String[][] trucks = {
+                {"Pickup Truck", "Flat Bed Truck" },
+                {"Garbage Truck", "Front Loader Truck", "Dump Truck"},
+                {"Fire Truck", "Semi Truck", "Box Truck", "Fuel Truck"}
+        };
+
+        for (int i = 0; i < trucks.length; i++) {
+            for (int x = 0; x < trucks[i].length; x++) {
+
+                System.out.println(trucks[i][x]);
+            }
+        }
+    }
 }
