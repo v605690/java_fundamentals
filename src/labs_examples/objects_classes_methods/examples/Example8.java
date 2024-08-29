@@ -11,8 +11,7 @@ class Vehicle_4_8 {
     }
 
     // Compute fuel needed for a given distance.
-    double fuelneeded(int miles)
-    {
+    double fuelneeded(int miles) {
         return (double) miles / mpg;
     }
 }

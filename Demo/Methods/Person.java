@@ -1,4 +1,4 @@
-package variables;
+package Methods;
 
 public class Person {
 

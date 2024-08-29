@@ -11,13 +11,17 @@ class Vehicle_4_3 {
 
 
     // Display the range.
-    public int range() {
-        //System.out.println("Range is " + fuelcap * mpg);
+    public int range(String s) {
+        System.out.println("Range is " + fuelcap * mpg);
         return fuelcap * mpg;
     }
 
     public void accelerate(double speed){
         this.speed += speed;
+    }
+
+    public int range(String string, int i) {
+        return 0;
     }
 }
 
@@ -38,7 +42,7 @@ class AddMeth {
 
         //print speed()
 
-        int range = minivan.range();
+        int range = minivan.range("Range is: " + 50);
 
         // assign values to fields in sportscar
         sportscar.passengers = 2;
@@ -49,11 +53,11 @@ class AddMeth {
         System.out.print("Minivan can carry " + minivan.passengers +
                 ". ");
 
-        minivan.range(); // display range of minivan
+        System.out.println(minivan.range("Range is: " + 50)); // display range of minivan
 
         System.out.print("Sportscar can carry " + sportscar.passengers +
                 ". ");
 
-        sportscar.range(); // display range of sportscar.
+        sportscar.range("Range is: " + 50); // display range of sportscar.
     }
 }
