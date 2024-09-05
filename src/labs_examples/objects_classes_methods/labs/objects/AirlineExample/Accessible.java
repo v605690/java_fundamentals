@@ -1,10 +1,10 @@
 package labs_examples.objects_classes_methods.labs.objects.AirlineExample;
 
 public class Accessible {
-    String travelers;
-    String disabled;
-    String seating;
-    String medical;
+    private String travelers;
+    private String disabled;
+    private String seating;
+    private String medical;
 
     public Accessible(String travelers, String disabled, String seating, String medical) {
         this.travelers = travelers;

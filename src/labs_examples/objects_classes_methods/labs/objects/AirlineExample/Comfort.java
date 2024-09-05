@@ -1,10 +1,10 @@
 package labs_examples.objects_classes_methods.labs.objects.AirlineExample;
 
 public class Comfort {
-    String classA;
-    String classB;
-    String classC;
-    String classD;
+    private String classA;
+    private String classB;
+    private String classC;
+    private String classD;
 
     public Comfort(String classA, String classB, String classC, String classD) {
         this.classA = classA;

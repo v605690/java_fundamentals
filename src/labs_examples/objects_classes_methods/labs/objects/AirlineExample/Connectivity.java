@@ -1,11 +1,11 @@
 package labs_examples.objects_classes_methods.labs.objects.AirlineExample;
 
 public class Connectivity {
-    String internet;
-    String hvac;
-    String lowVoltage;
-    String seating;
-    String pde;
+    private String internet;
+    private String hvac;
+    private String lowVoltage;
+    private String seating;
+    private String pde;
 
     public Connectivity(String internet, String hvac, String lowVoltage, String seating, String pde) {
         this.internet = internet;

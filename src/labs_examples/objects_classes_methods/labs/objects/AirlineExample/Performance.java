@@ -2,9 +2,9 @@ package labs_examples.objects_classes_methods.labs.objects.AirlineExample;
 
 public class Performance {
     int speed;
-    String propulsion;
-    String wingSpan;
-    Double fuelCapacity;
+    private String propulsion;
+    private String wingSpan;
+    private Double fuelCapacity;
 
     public Performance(int speed, String propulsion, String wingSpan, Double fuelCapacity) {
         this.speed = speed;
