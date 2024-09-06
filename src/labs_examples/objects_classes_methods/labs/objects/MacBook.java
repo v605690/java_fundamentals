@@ -17,12 +17,28 @@ public class MacBook {
     String Memory;
     String SSD;
 
+    @Override
+    public String toString() {
+        return "MacBook{" +
+                "M1='" + M1 + '\'' +
+                ", CPU='" + CPU + '\'' +
+                ", GPU='" + GPU + '\'' +
+                ", Memory='" + Memory + '\'' +
+                ", SSD='" + SSD + '\'' +
+                '}';
+    }
+
     public MacBook() {
+
         M1 = "Default hardware specs";
         CPU = "Default hardware specs";
         GPU = "Default hardware specs";
-
     }
+
+    public String toString2() {
+        return M1+" "+CPU+" "+GPU;
+    }
+
 
     public MacBook(String m3, String CPU, String GPU) {
         M1 = m3;
@@ -31,4 +47,10 @@ public class MacBook {
         Memory = "Default memory";
         SSD = "Default SSD";
     }
+
+    public String toString3() {
+        return M1+" "+CPU+" "+GPU+" "+Memory+" "+SSD;
+    }
+
+
 }
