@@ -9,7 +9,7 @@ public class MethodTraining {
         overload(4);
         overload(4, 6);
 
-        Person person1 = new Person("Larry");
+        Person person1 = new Person("Larry", 36);
 
         Person person2 = person1;
 

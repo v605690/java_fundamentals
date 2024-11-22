@@ -3,7 +3,7 @@ package Methods;
 public class Person {
 
     String name;
-    int age;
+    public int age;
     static int numPersonCreated;
 
     public Person(String name, int age) {
