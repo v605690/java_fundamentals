@@ -35,7 +35,7 @@ class Finalize {
        of objects generated in order to force
        garbage collection. */
 
-        for(count=1; count < 100000; count++)
+        for(count=1; count < 1000000; count++)
             ob.generator(count);
     }
 }

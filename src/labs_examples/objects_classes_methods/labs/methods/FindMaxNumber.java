@@ -1,6 +1,7 @@
 package labs_examples.objects_classes_methods.labs.methods;
 
 public class FindMaxNumber {
+
     static int array[] = {23, 51, 17, 33};
 
     public static int findLargeNumber(int i, int i1, int i2) {

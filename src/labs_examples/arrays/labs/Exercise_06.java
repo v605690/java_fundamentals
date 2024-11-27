@@ -1,5 +1,8 @@
 package labs_examples.arrays.labs;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  *  Reversing an array in place
  *
@@ -33,5 +36,5 @@ public class Exercise_06 {
                 System.out.print(i + " ");
         }
     }
-
 }
+

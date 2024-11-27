@@ -16,7 +16,7 @@ public class Exercise_02 {
         int index = -1;
         // write code here
         for (int i = 0; (i < array.length) && (index == -1); i++) {
-            if (array[i] == 9) {
+            if (array[i] == 3) {
                 index = i;
             }
         }

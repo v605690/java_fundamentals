@@ -13,7 +13,7 @@ class LengthDemo {
 
         for (int i = 0; i < table.length; i++ ){
             for (int x = 0; x < table[i].length; x++){
-                System.out.println(table[i][x]);
+                System.out.print(table[i][x]);
             }
         }
     }

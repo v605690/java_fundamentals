@@ -6,7 +6,7 @@ public class ReverseArray {
 
     public int[] reverseArray(int[] arr) {
 
-        System.out.println("Orignial Array " + Arrays.toString(arr));
+        System.out.println("Original Array " + Arrays.toString(arr));
 
         int i;
         System.out.println("In place reverse array: [");

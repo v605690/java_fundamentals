@@ -6,20 +6,37 @@ import static labs_examples.objects_classes_methods.labs.methods.SmallArray.arra
 
 public class MethodTraining {
     public static void main(String[] args) {
+
+        OverLoadingEx calc = new OverLoadingEx();
+
+        int sum1 = calc.myadd(2, 4);
+        int sum2 = calc.myadd(3, 6, 9);
+        double sum3 = calc.myadd(3.3, 7.7, 1.4);
+
+        System.out.println("Overload Sum1: " + sum1);
+        System.out.println("Overload Sum2: " + sum2);
+        System.out.println("Overload Sum3: " + sum3);
+
         overload(4);
         overload(4, 6);
+
+        PassByValue pv = new PassByValue();
+
+        int pbv = 55;
+        pv.modifyValue(pbv);
+        System.out.println("Pass By Value Example: " + pbv);
 
         Person person1 = new Person("Larry", 36);
 
         Person person2 = person1;
 
-        System.out.println("Reference Type: " + person1.name);
-        System.out.println("Reference Type: " + person2.name);
+        System.out.println("Pass By Reference: " + person1.name);
+        System.out.println("Pass By Reference: " + person2.name);
 
         person2.name = "Bob";
 
-        System.out.println("Reference Type: " + person1.name);
-        System.out.println("Reference Type: " + person2.name);
+        System.out.println("Pass By Reference: " + person1.name);
+        System.out.println("Pass By Reference: " + person2.name);
 
         System.out.println("Largest of 4 numbers is: " + FindMaxNumber.findLargeNumber(2, 3, 4));
 
@@ -35,7 +52,7 @@ public class MethodTraining {
         ReverseArray r = new ReverseArray();
 
         int[] arr = {14, 32, 21, 66, 71};
-        int[] a = r.reverseArray(arr);
+        n = r.reverseArray(arr);
         System.out.println(" ");
 
         System.out.println(ArrayAndList.ArrayListMethod(48, 1, 2));
