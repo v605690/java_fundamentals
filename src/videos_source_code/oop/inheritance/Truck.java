@@ -14,7 +14,7 @@ public class Truck extends Vehicle{
 
     @Override
     public boolean start() {
-        System.out.println("starting trucke");
+        System.out.println("starting truck");
         return false;
     }
 

@@ -53,3 +53,10 @@ class NestedClassDemo {
         outOb.analyze();
     }
 }
+
+class MyFirstConstructor{
+    int x;
+    MyFirstConstructor(){
+        x = 42;
+    }
+}
