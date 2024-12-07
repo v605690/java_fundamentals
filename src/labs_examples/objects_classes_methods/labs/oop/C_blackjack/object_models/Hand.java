@@ -1,4 +1,4 @@
-package labs_examples.objects_classes_methods.labs.oop.C_blackjack;
+package labs_examples.objects_classes_methods.labs.oop.C_blackjack.object_models;
 
 import java.util.ArrayList;
 
