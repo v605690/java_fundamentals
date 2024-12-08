@@ -101,14 +101,6 @@ public class Product {
         seafood.add(new Item("Seabass", "Seafood", "35lbs", 49));
         seafood.add(new Item("Clams", "Seafood", "35lbs", 119));
 
-        PerishableItem Butter = new PerishableItem("Butter", "Dairy", "150lbs", 531, "2024-12-31");
-        PerishableItem Milk = new PerishableItem("Silk Alomond Milk", "Dairy", "150lbs", 717,"2024-12-31");
-        PerishableItem Cream = new PerishableItem("Half & Half", "Dairy", "15lbs", 31.80,"2024-12-31");
-        PerishableItem Fish = new PerishableItem("Catfish", "Seafood", "35lbs", 87.50,"2024-12-31");
-        PerishableItem SourCream = new PerishableItem("Sour Cream", "Dairy", "15lbs", 36,"2024-12-31");
-        PerishableItem CreamCheese = new PerishableItem("Cream Cheese", "Dairy", "15lbs", 18,"2024-12-31");
-        PerishableItem Cheese = new PerishableItem("Cheese", "Dairy", "150lbs", 600,"2024-12-31");
-        PerishableItem Blackberries = new PerishableItem("Blackberries", "Produce", "100lbs", 487,"2024-12-31");
     }
 
     public Product() {
@@ -120,7 +112,7 @@ public class Product {
     }
 
     public String getSize() {
-        return "AAA Food Quanity List: " + "\nMeat Items " + meats.size() + "\nProduce Items " + produce.size() +
+        return "AAA Food Quantity List: " + "\nMeat Items " + meats.size() + "\nProduce Items " + produce.size() +
                 "\nFrozen Items " + frozen.size() + "\nDairy Items " + dairy.size() + "\nSeafood Items " + seafood.size();
 
     }

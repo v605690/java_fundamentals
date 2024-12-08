@@ -13,7 +13,7 @@ public class Item {
         this.weight = weight;
         this.price = price;
     }
-
+    // Getters and Setters (Encapsulation)
     public String getName() {
         return name;
     }
