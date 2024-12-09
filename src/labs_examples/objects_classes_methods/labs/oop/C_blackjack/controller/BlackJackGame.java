@@ -30,9 +30,70 @@ public class BlackJackGame extends Game implements CardGame {
         while (true) {
             if(checkforHit(user)) {
                 deal(user, deck);
+                } else {
+                break;
                 }
             }
+            while (true) {
+                if(checkforHit(computer)) {
+                    deal(computer, deck);
+                } else {
+                    break;
+                }
+            }
+
+            scoreHands(user, computer);
+
         } while (count < 1);
+    }
+
+    private void scoreHands(CardPlayer user, CardPlayer computer) {
+
+        int computerScore = analyzeHand(computer);
+        int userScore = analyzeHand(user);
+
+        int computerDiff = 21 - computerScore;
+        int userDiff = 21 - userScore;
+
+        String computerHand = computer.getHand().toString();
+        String output = "";
+
+        if (computerScore == 21 && userScore == 21) {
+            output = "\nYOU TIED!! I (Computer) scored " + computerScore + " with " + computerHand;
+            user.setStackValue(user.getStackValue() - (user.getBet() / 2));
+            printUserChipBalance(user);
+        } else if (computerScore == 21) {
+            output = "\nYOU LOSE!! I (Computer) landed 21 with " + computerHand;
+            user.setStackValue(user.getStackValue() - user.getBet());
+            printUserChipBalance(user);
+        } else if (userScore > 21) {
+            output = "\nYOU BUSTED!! Sorry about that.";
+            user.setStackValue(user.getStackValue() - user.getBet());
+            printUserChipBalance(user);
+        } else if (userDiff > computerDiff && computerDiff >= 0) {
+            output = ("\nYOU LOSE! I (Computer) scored " + computerScore + " with " + computerHand);
+            user.setStackValue(user.getStackValue() - user.getBet());
+            printUserChipBalance(user);
+        } else if (userDiff < computerDiff) {
+            output = ("\nYOU WIN!! I (Computer) score " + computerScore + " with " + computerHand);
+            user.setStackValue(user.getStackValue() + (user.getBet() * 3));
+            printUserChipBalance(user);
+        } else if (computerScore > 21) {
+            output = ("\nYOU WIN!! I (Computer) busted with " + computerHand);
+            user.setStackValue(user.getStackValue() + (user.getBet() * 3));
+            printUserChipBalance(user);
+        }
+
+        System.out.println(output);
+        writeOutputToFile(output);
+    }
+
+    private void writeOutputToFile(String output) {
+
+    }
+
+    private void printUserChipBalance(CardPlayer user) {
+        System.out.println("You've currently got $" + user.getStackValue() + " worth of chips");
     }
 
     private boolean checkforHit(CardPlayer user) {
@@ -46,15 +107,19 @@ public class BlackJackGame extends Game implements CardGame {
 
             String response = scanner.next();
 
-            if(response.equalsIgnoreCase("y")) {
+            if (response.equalsIgnoreCase("y")) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            if (currentScore <= 16) {
                 return true;
             } else {
                 return false;
             }
         }
-        return false;
     }
-
     private int analyzeHand(CardPlayer user) {
         int currentScore = 0;
         for(Card c : user.getHand()) {
@@ -108,7 +173,7 @@ public class BlackJackGame extends Game implements CardGame {
 
         if(bet <= player.getStackValue()) {
             if(bet == player.getStackValue()) {
-                System.out.println("Goin' all in, eh?");
+                System.out.println("Goin' \"all in\", eh?");
             }
             player.setBet(bet);
 
@@ -119,7 +184,8 @@ public class BlackJackGame extends Game implements CardGame {
                         "than $" + player.getStackValue());
                 System.out.println("\nHow much would you like to bet?");
                 bet = scanner.nextInt();
-            } while (bet >= player.getStackValue());
+            } while (bet > player.getStackValue());
+
             player.setBet(bet);
         }
     }
