@@ -28,6 +28,8 @@ public class ColorA {
         ColorB.bluyell();
         ColorB obj6 = new ColorB();
         obj6.mixColor3();
+        ColorA obj7 = new ColorA();
+        obj7.mixedColor3();
     }
 
     public static void red() {
@@ -52,6 +54,14 @@ public class ColorA {
 
     public void mixedColor2() {
         rdgrn();
+    }
+
+    public void mixedColor3() {
+        yelRed();
+    }
+
+    public static void yelRed() {
+        System.out.println("Yellow mixed Red = Orange");
     }
 }
 
