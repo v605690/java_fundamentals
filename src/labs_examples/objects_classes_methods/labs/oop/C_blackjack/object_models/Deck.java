@@ -2,6 +2,7 @@ package labs_examples.objects_classes_methods.labs.oop.C_blackjack.object_models
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Random;
 
 public class Deck {
 
@@ -52,16 +53,16 @@ public class Deck {
 
         for(int i = 0; i < 4; i++) {
             for(int j = 1; j < 14; j++) {
-                if (i == 1) {
+                if (j == 1) {
                     deck[count] = new Card(suit[i], "ACE");
-                } else if (i == 11) {
+                } else if (j == 11) {
                     deck[count] = new Card(suit[i], "JACK");
-                } else if (i == 12) {
+                } else if (j == 12) {
                     deck[count] = new Card(suit[i], "QUEEN");
-                } else if (i == 13) {
+                } else if (j == 13) {
                     deck[count] = new Card(suit[i], "KING");
                 } else {
-                    deck[count] = new Card(suit[i], Integer.toString(i).toUpperCase());
+                    deck[count] = new Card(suit[i], Integer.toString(j).toUpperCase());
                 }
                 count++;
             }
@@ -79,5 +80,23 @@ public class Deck {
 
     public Card getCardAt(int randomNum) {
         return deck[randomNum];
+    }
+    public void deal(CardPlayer player) {
+//        int randomNum = getRandomCard();
+//        Card card = getCardAt(randomNum);
+
+        player.getHand().add(getCardAt(getRandomCard()));
+    }
+
+    private int getRandomCard() {
+        Random random = new Random();
+
+        int n = random.nextInt(51) + 0;
+
+        while(isCardUsed(n)) {
+            n = random.nextInt(51) + 0;
+        }
+        getUsedCards().add(n);
+        return n;
     }
 }

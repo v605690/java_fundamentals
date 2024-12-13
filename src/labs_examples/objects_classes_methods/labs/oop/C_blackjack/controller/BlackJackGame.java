@@ -29,14 +29,14 @@ public class BlackJackGame extends Game implements CardGame {
 
         while (true) {
             if(checkforHit(user)) {
-                deal(user, deck);
+                deck.deal(user);
                 } else {
                 break;
                 }
             }
             while (true) {
                 if(checkforHit(computer)) {
-                    deal(computer, deck);
+                    deck.deal(computer);
                 } else {
                     break;
                 }
@@ -129,10 +129,10 @@ public class BlackJackGame extends Game implements CardGame {
     }
 
     private void dealInitialCards(CardPlayer user, CardPlayer computer, Deck deck) {
-        deal(user, deck);
-        deal(computer, deck);
-        deal(user, deck);
-        deal(computer, deck);
+        deck.deal(user);
+        deck.deal(computer);
+        deck.deal(user);
+        deck.deal(computer);
 
         System.out.println("\n ---------------------------------------------");
         System.out.println("Your first card is: " + user.getHand().get(0).customToString());
@@ -144,24 +144,7 @@ public class BlackJackGame extends Game implements CardGame {
 
     }
 
-    @Override
-    public void deal(CardPlayer player, Deck deck) {
-        int randomNum = getRandomCard(deck);
-        Card card = deck.getCardAt(randomNum);
-        player.getHand().add(card);
-    }
 
-    private int getRandomCard(Deck deck) {
-        Random random = new Random();
-
-        int n = random.nextInt(51) + 0;
-
-        while(deck.isCardUsed(n)) {
-            n = random.nextInt(51) + 0;
-        }
-        deck.getUsedCards().add(n);
-        return n;
-    }
 
     @Override
     public void handleBets(CardPlayer player) {
