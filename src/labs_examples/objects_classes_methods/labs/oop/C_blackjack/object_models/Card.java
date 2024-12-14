@@ -12,6 +12,10 @@ public class Card {
         this.value = value;
     }
 
+    public Card(char[] suit, String ace) {
+
+    }
+
     public String customToString() {
         return suit + value + suit;
     }
