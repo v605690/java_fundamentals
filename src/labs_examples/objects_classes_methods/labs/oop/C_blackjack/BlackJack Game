@@ -1,0 +1,50 @@
+AE = alt + enter = allows to create the method
+CN = cmd + N = allow to bring up the menu to create constructor
+
+EntryPoint
+
+Add the Scanner
+Scanner scanner = new Scanner(System.in);
+System.out.println("What game would you like to play?")
+System.out.println("Enter 1 for BlackJack, 2 for 5 Card Draw, 3 for ....");
+
+int userChoice = scanner.nextInt();
+
+    if (userChoice == 1) {
+        Create BlackJackGame blackJackGame = new BlackJackGame(); -> AE
+        blackJackGame.play(); -> AE
+    } else if (userChoice == 2) {
+     // create an object of the 5 card draw poker game play
+  }
+}
+
+In BlackJackGame, extends to Game -> AE
+
+setName("BlackJack");
+setBasicRules("The player closet to 21 without going over 21 wins");
+
+In Game, create name and basicRules instance variables and getter/setter methods
+
+CardPlayer computer = new CardPlayer("Computer, 10000); -> AE
+CardPlayer user = new CardPlayer();
+CardPlayer will need a constructor
+
+private String name;
+private int stackValue;
+
+create constructor -> CN
+constructors are invoked when objects are created using the "new" keyword
+
+overload the method
+Overloading
+Creating two or more constructors, or methods, with the same name and return
+type, but different parameters
+
+public CardPlayer() {
+    initializeNewUser();
+}
+
+
+
+
+

@@ -9,10 +9,14 @@ public class CardPlayer {
     private int bet;
     private ArrayList<Card> hand = new ArrayList();
 
+    //  6 overload the method with a new custom constructor
+    // Overloading
+    // Creating two or more constructors, or methods, with the same name and return
     public CardPlayer() {
         initializeNewUser();
     }
 
+    // Create 1st constructor
     public CardPlayer(String name, int stackValue) {
         this.name = name;
         this.stackValue = stackValue;
@@ -51,7 +55,7 @@ public class CardPlayer {
     }
 
     private void initializeNewUser() {
-
+        // 7
         Scanner scanner = new Scanner(System.in);
         System.out.println("Hello, and welcome to BlackJack! My name is Computer, what is your name?");
         this.name = scanner.next();

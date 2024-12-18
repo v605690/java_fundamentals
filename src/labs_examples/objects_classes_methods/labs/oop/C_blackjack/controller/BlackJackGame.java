@@ -18,6 +18,7 @@ public class BlackJackGame extends Game implements CardGame {
         int count = 0;
 
         do {
+            // 8
             deck = new Deck();
 
             System.out.println("\nGame #" + Deck.getFreshDecksLoaded());

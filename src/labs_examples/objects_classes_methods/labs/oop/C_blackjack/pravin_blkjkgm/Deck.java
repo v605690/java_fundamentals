@@ -87,3 +87,8 @@ public class Deck {
     }
 }
 
+/*
+If/when the random number has not yet been played add the card at the index
+of random num from the Cards[] to the player's "Hand" ArrayList, then add that random number to the ArrayList<Integer>
+called usedCards in the Deck class. This usedCards arraylist tracks the cards that have already been dealt.
+ */

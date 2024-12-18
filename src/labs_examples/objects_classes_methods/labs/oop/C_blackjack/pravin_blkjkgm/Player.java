@@ -4,6 +4,7 @@ public class Player {
     String name;
     Hand hand;
     int potValue;
+    private Hand[] cards;
 
     public Player(String name, Hand hand, int potValue) {
         this.name = name;
@@ -42,5 +43,18 @@ public class Player {
                 ", hand=" + hand +
                 ", potValue=" + potValue +
                 '}';
+    }
+
+    public Hand[] getCards(Hand[] cards) {
+        return cards;
+    }
+
+    public void setCards(Hand[] cards) {
+        this.cards = cards;
+    }
+
+    public Hand[] getCards() {
+
+        return new Hand[0];
     }
 }
