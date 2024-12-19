@@ -4,6 +4,7 @@ public class Player {
     String name;
     Hand hand;
     int potValue;
+    int bet;
     private Hand[] cards;
 
     public Player(String name, Hand hand, int potValue) {
@@ -36,12 +37,17 @@ public class Player {
         this.potValue = potValue;
     }
 
+    public int getBet() { return bet; }
+
+    public void setBet(int bet) { this.bet = bet; }
+
     @Override
     public String toString() {
         return "Player{" +
                 "name='" + name + '\'' +
                 ", hand=" + hand +
                 ", potValue=" + potValue +
+                ", bet=" + bet +
                 '}';
     }
 
@@ -56,5 +62,9 @@ public class Player {
     public Hand[] getCards() {
 
         return new Hand[0];
+    }
+
+    public int getStackValue() {
+        return 0;
     }
 }

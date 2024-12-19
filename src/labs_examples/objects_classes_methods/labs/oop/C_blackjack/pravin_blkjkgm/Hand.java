@@ -39,8 +39,36 @@ public class Hand {
         String output = "";
 
         if(computerScore == 21 && userScore == 21) {
-
+            output = "\nYOU TIED!! I (Computer) scored " + computerScore + " with " + computerHand;
+            user.setPotValue(user.getStackValue() - (user.getBet() / 2));
+            printUserChipBalance(user);
+        } else if (computerScore == 21 ) {
+            output = "\nYOU LOSE!! I (Computer) landed 21 with " + computerHand;
+            user.setPotValue(user.getStackValue() - user.getBet());
+            printUserChipBalance(user);
+        } else if (userScore > 21 ){
+            output = "\nYOU BUSTED!! Sorry about that.";
+            user.setPotValue(user.getStackValue() - user.getBet());
+            printUserChipBalance(user);
+        } else if (userDiff > computerDiff && computerDiff >= 0) {
+            output = ("\nYOU LOSE! I (Computer) scored " + computerScore + " with " + computerHand);
+            user.setPotValue(user.getStackValue() - user.getBet());
+            printUserChipBalance(user);
+        } else if (userDiff < computerDiff) {
+            output = ("\nYOU WIN!! I (Computer) score " + computerScore + " with " + computerHand);
+            user.setPotValue(user.getStackValue() + (user.getBet() * 3));
+            printUserChipBalance(user);
+        } else if (computerScore > 21) {
+            output = ("\nYOU WIN!! I (Computer) busted with " + computerHand);
+            user.setPotValue(user.getStackValue() + (user.getBet() * 3));
+            printUserChipBalance(user);
         }
+
+        System.out.println(output);
+    }
+
+    private void printUserChipBalance(Player user) {
+        System.out.println("You've currently got $" + user.getStackValue() + " worth of chips");
     }
 
     private int computerHand(Player user) {

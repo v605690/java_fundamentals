@@ -6,6 +6,9 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class BlackJackGame extends Game implements CardGame {
+
+    BlackJackTracker tracker = new BlackJackTracker();
+
     public void play() {
 
         setName("BlackJack");
@@ -18,11 +21,11 @@ public class BlackJackGame extends Game implements CardGame {
         int count = 0;
 
         do {
-            // 8
+            // 8 load new deck
             deck = new Deck();
-
+            // 9 load fresh deck of cards
             System.out.println("\nGame #" + Deck.getFreshDecksLoaded());
-
+            // 10. Need to handle bets.  Use implements CardGame
             handleBets(user);
 
             dealInitialCards(user, computer, deck);
@@ -87,6 +90,18 @@ public class BlackJackGame extends Game implements CardGame {
 
         System.out.println(output);
         writeOutputToFile(output);
+
+        int bju = tracker.BlackJackUserTracker();
+        int bjc = tracker.BlackJackComputerTracker();
+        int u = tracker.incrementUserGamesPlayed();
+        int c = tracker.incrementComputerGamesPlayed();
+
+        int totalGames = tracker.getTotalGamesPlayed();
+
+        System.out.println("Total Games Played between User & Computer = " + totalGames);
+        System.out.println("User Games Played = " + u);
+        System.out.println("Computer Games Played = " + c);
+
     }
 
     private void writeOutputToFile(String output) {
@@ -145,14 +160,18 @@ public class BlackJackGame extends Game implements CardGame {
 
     }
 
+    // 12 Below will create two methods from implements CardGame
+    @Override
+    public void deal(CardPlayer player, Deck deck) {
 
+    }
 
     @Override
     public void handleBets(CardPlayer player) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("\nHow much would you like to bet on this game?");
         System.out.println("You're currently holding $" + player.getStackValue() + " worth of chips");
-
+        // 13 Set up the bet with player
         int bet = scanner.nextInt();
 
         if(bet <= player.getStackValue()) {
@@ -162,7 +181,7 @@ public class BlackJackGame extends Game implements CardGame {
             player.setBet(bet);
 
         } else {
-
+            // 14 adding below in a do while loop; basically stating you can't bet more than you got
             do {
                 System.out.println("\nSorry pal, you can't bet more than you got! Please bet something less " +
                         "than $" + player.getStackValue());

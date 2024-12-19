@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class CardPlayer {
     private String name;
     private int stackValue;
+    // Below is required to track bets and hand during step 13
     private int bet;
     private ArrayList<Card> hand = new ArrayList();
 
