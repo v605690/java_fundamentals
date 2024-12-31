@@ -1,0 +1,7 @@
+Choosing a Type of Stream
+If you are reading/writing data to a file that is not related to human language and its associated characters, you are almost certainly good to go by using a Byte stream.
+
+If you are reading/writing data to a file that is related to human language and its associated characters, then you'll want to use a Character stream.
+
+Identifying the Type of Steam
+The difference between Byte streams and Character streams in Java can always be seen in the class name definition. Byte streams have the word stream somewhere in the class name. Whereas all Character streams have the words reader or writer in the class name.
