@@ -15,12 +15,14 @@ import java.nio.charset.StandardCharsets;
  */
 class ReadFileDemo {
     public static void main(String[] args) {
-        try (FileInputStream stream = new FileInputStream("src/labs_examples/input_output/files/DataInput.txt")) {
+        try (FileInputStream fileStream = new FileInputStream("src/labs_examples/input_output/files/DataInput.txt");
+            BufferedInputStream buffStream = new BufferedInputStream(fileStream)) {
 
-            int data;
-            while ((data = stream.read()) != -1) {
-
-                System.out.print((char) data);
+            byte[] buffer = new byte[10];
+            int data = 0;
+            while ((data = buffStream.read(buffer)) != -1) {
+                System.out.print(new String(buffer, 0, data));
+                //System.out.print((char) data);
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -57,9 +59,39 @@ class ReadFile {
 
 class WriteFile {
     public static void main(String[] args) {
-        try (FileWriter writeFile = new FileWriter("src/labs_examples/input_output/files/NewCatchPhrase.txt")) {
+        try (BufferedWriter writeFile = new BufferedWriter(new FileWriter("src/labs_examples/input_output/files/NewCatchPhrase.txt"))) {
             String text = "Learning Java Input Streams got me spinning";
             writeFile.write(text);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+class DataOutputStreamDemo {
+    public static void main(String[] args) {
+        try (DataOutputStream dot = new DataOutputStream(new FileOutputStream("src/labs_examples/input_output/files/data.bin"))) {
+            dot.writeDouble(6.04);
+            dot.writeInt(850);
+            dot.writeBoolean(true);
+            dot.writeChars("1");
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+class DataInputStreamDemo {
+    public static void main(String[] args) {
+        try (DataInputStream din = new DataInputStream(new FileInputStream("src/labs_examples/input_output/files/data.bin"))) {
+            double x = din.readDouble();
+            int y = din.readInt();
+            boolean b = din.readBoolean();
+            char c = din.readChar();
+
+            System.out.println("Values " + x + " " + y + " " + b + " " + c);
+
         } catch (IOException e) {
             e.printStackTrace();
         }
