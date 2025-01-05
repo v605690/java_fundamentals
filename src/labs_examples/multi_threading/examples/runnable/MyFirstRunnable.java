@@ -17,6 +17,7 @@ public class MyFirstRunnable implements Runnable {
 
     // constructor that takes in a name for the thread
     public MyFirstRunnable(String name) {
+        super();
         // create the Thread object - pass "this" object and the name given - the Thread class has many constructors you
         // can choose from
         thread = new Thread(this, name);
