@@ -35,7 +35,7 @@ class FileEncryption {
 
             int charInt;
             while ((charInt = br.read()) != -1) {
-                char encryptChar = (char) (charInt + key);
+               char encryptChar = (char) (charInt + key);
                 bw.write(encryptChar);
                 //System.out.print(encryptChar);
             }
@@ -50,28 +50,12 @@ class FileEncryption {
 
             int charInt;
             while ((charInt = br.read()) != -1) {
-                //char decryptChar = (char) (charInt + key);
-                bw.write(decryptChar(charInt));
+                char decryptChar = (char) (charInt - key);
+                bw.write(decryptChar);
                 //System.out.print(charInt);
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
-    private static int encryptChar(int charInt, int key) {
-
-//        if (Character.isLetter(charInt)) {
-//            char c = Character.isLowerCase(charInt) ? 'a' : 'A';
-//            return c + (charInt - c + key) % 26;
-            char[] alphabets = "abcdefghijklmnopqrstuvwxyz".toCharArray();
-            for (char a : alphabets) {
-                return a + (charInt - a + key) % 26;
-            }
-            return charInt;
-        }
-
-        private static int decryptChar(int charInt){
-            return encryptChar(charInt, -1 );
-        }
-    }
+}
