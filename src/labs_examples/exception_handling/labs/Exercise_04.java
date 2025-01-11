@@ -15,6 +15,7 @@ class NestedTryCatch {
                 int x = numArray[5];
             } catch (ArrayIndexOutOfBoundsException exc) {
                 System.out.println("Exception Occurred in inner try-catch block");
+                System.out.println(exc.getMessage());
             }
         } catch (Exception exc) {
             System.out.println("Exception Occurred outer try-catch block");
