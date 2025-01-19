@@ -7,4 +7,6 @@ class Gen2<T> {
     Gen2(T o) {
         ob = o;
     }
+
+
 }
