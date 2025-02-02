@@ -1,5 +1,9 @@
 package labs_examples.lambdas.labs;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.Objects;
+
 /**
  * Lambdas Exercise 1:
  *
@@ -23,3 +27,113 @@ package labs_examples.lambdas.labs;
  *
  *
  */
+
+@FunctionalInterface
+public interface Exercise_01 {
+    void execute();
+}
+
+class Message {
+    public static void main(String[] args) {
+Exercise_01 message = () -> System.out.println("First Background Check Approved");
+message.execute();
+
+    Exercise_01 anonymousMessage = new Exercise_01() {
+        @Override
+        public void execute() {
+            System.out.println("Secondary Background Check Approved");
+        }
+    };
+    anonymousMessage.execute();
+    }
+}
+
+@FunctionalInterface
+interface CustomFunction<T, R> {
+    R apply(T t);
+}
+
+class Controller {
+    public static void main(String[] args) {
+        CustomFunction<Integer, Integer> increment = x -> x + 1;
+
+        int originalValue2 = 5;
+        int originalValue = 5;
+        int result = increment.apply(originalValue);
+        System.out.println(originalValue);
+        System.out.println(result);
+
+        CustomFunction anonymousOutput = new CustomFunction() {
+
+            @Override
+            public Object apply(Object t) {
+            int increment2 = (int) t + 1;
+            int result2 = (int) apply(originalValue2);
+
+                System.out.println(originalValue2);
+                System.out.println(result2);
+                return originalValue2;
+            }
+        };
+        anonymousOutput.apply(result);
+    }
+}
+
+@FunctionalInterface
+interface Calculator {
+    int calculate(int x, int y);
+}
+
+class Controller2{
+    public static void main(String[] args) {
+        Calculator add = (x, y) -> x + y;
+        int result = add.calculate(4, 2);
+        System.out.println(result);
+
+        Calculator add2 = new Calculator() {
+            @Override
+            public int calculate(int x, int y) {
+                return x + y;
+            }
+        };
+        int result2 = add2.calculate(4, 2);
+        System.out.println(result2);
+    }
+}
+
+@FunctionalInterface
+interface Predicate<T> {
+    boolean test(T t);
+}
+
+class PredicateDemo {
+    public static void main(String[] args) {
+        List<String> names = Arrays.asList("Lisa", "Toby", "Jennifer", "John");
+
+        Predicate<String> name = x -> Objects.equals(x, "John");
+
+        for (String str : names) {
+            if (name.test(str)) {
+                System.out.println(str);
+            }
+        }
+    }
+}
+
+@FunctionalInterface
+interface BinaryOperator<T> {
+    T apply(T x, T y);
+}
+
+class Controller3 {
+    public static void main(String[] args) {
+        BinaryOperator<Integer> adder = (x, y) -> x + y;
+        int result = adder.apply(20, 15);
+        System.out.println(result);
+    }
+}
+
+
+
+
+

@@ -36,7 +36,6 @@ public class BuiltInFunctionalInterfaces {
 
         System.out.println(longerThan.test(5, "hello world"));
 
-
     }
 
     // Represents a function that accepts one argument and produces a result.
