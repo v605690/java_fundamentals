@@ -27,7 +27,7 @@ import java.util.Objects;
  *
  *
  */
-
+// Question 1 & 2
 @FunctionalInterface
 public interface Exercise_01 {
     void execute();
@@ -47,7 +47,7 @@ message.execute();
     anonymousMessage.execute();
     }
 }
-
+// Question 3 & 4
 @FunctionalInterface
 interface CustomFunction<T, R> {
     R apply(T t);
@@ -79,6 +79,7 @@ class Controller {
     }
 }
 
+// Question 5 & 6
 @FunctionalInterface
 interface Calculator {
     int calculate(int x, int y);
@@ -101,6 +102,7 @@ class Controller2{
     }
 }
 
+// Question 7
 @FunctionalInterface
 interface Predicate<T> {
     boolean test(T t);
