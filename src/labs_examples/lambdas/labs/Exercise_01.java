@@ -49,33 +49,28 @@ message.execute();
 }
 // Question 3 & 4
 @FunctionalInterface
-interface CustomFunction<T, R> {
-    R apply(T t);
+interface CustomFunction<T> {
+    T apply(T t);
 }
 
 class Controller {
     public static void main(String[] args) {
-        CustomFunction<Integer, Integer> increment = x -> x + 1;
+        CustomFunction<Integer> increment = x -> x + 1;
 
-        int originalValue2 = 5;
         int originalValue = 5;
         int result = increment.apply(originalValue);
         System.out.println(originalValue);
         System.out.println(result);
 
-        CustomFunction anonymousOutput = new CustomFunction() {
+        CustomFunction<Integer> anonymousOutput = new CustomFunction<>() {
 
             @Override
-            public Object apply(Object t) {
-            int increment2 = (int) t + 1;
-            int result2 = (int) apply(originalValue2);
+            public Integer apply(Integer t) {
 
-                System.out.println(originalValue2);
-                System.out.println(result2);
-                return originalValue2;
+                return t + 1;
             }
         };
-        anonymousOutput.apply(result);
+        System.out.println(anonymousOutput.apply(1));
     }
 }
 
@@ -112,7 +107,7 @@ class PredicateDemo {
     public static void main(String[] args) {
         List<String> names = Arrays.asList("Lisa", "Toby", "Jennifer", "John");
 
-        Predicate<String> name = x -> Objects.equals(x, "John");
+        Predicate<String> name = x -> Objects.equals(x, "Lisa");
 
         for (String str : names) {
             if (name.test(str)) {

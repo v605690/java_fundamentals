@@ -33,13 +33,16 @@ class Controller1 {
     }
 
     private static void demoComparator() {
-        Comparator<String> stringLengthComparator = (s1, s2) -> s1.length() - s2.length();
+        Comparator<String> stringLengthComparator = Comparator.comparingInt(String::length);
         System.out.println(stringLengthComparator.compare("Coding Is Kool", "Coding"));
     }
 
     private static void demoBiFunction() {
         BiFunction<Integer, Integer, Integer> multiply = (x, y) -> x * y;
         System.out.println(multiply.apply(5, 3));
+        BiFunction<Integer, Integer, String> stringBiFunction = multiply.andThen((z) -> "Value to Z is " + z);
+        stringBiFunction = stringBiFunction.andThen((s) -> "The transformed " + s);
+        System.out.println(stringBiFunction.apply(5, 3));
     }
 
     private static void demoBiConsumer() {
