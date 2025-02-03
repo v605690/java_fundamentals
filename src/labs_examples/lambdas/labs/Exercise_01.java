@@ -57,10 +57,8 @@ class Controller {
     public static void main(String[] args) {
         CustomFunction<Integer> increment = x -> x + 1;
 
-        int originalValue = 5;
-        int result = increment.apply(originalValue);
-        System.out.println(originalValue);
-        System.out.println(result);
+        int applyValue = increment.apply(2);
+        System.out.println(applyValue);
 
         CustomFunction<Integer> anonymousOutput = new CustomFunction<>() {
 
