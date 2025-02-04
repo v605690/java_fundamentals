@@ -3,6 +3,9 @@ package labs_examples.lambdas.labs;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 /**
@@ -29,5 +32,61 @@ import java.util.stream.Stream;
  */
 
 class Example {
-    
+    public static void main(String[] args) {
+        rangeFunction();
+        sumFunction();
+        mapFunction();
+        filterFunction();
+        reduceFunction();
+        streamTextFileFunction();
+        streamCSVFileFunction();
+        streamCSVFileFunction2();
+        anyMatchFunction();
+        allMatchFunction();
+        collectFunction();
+    }
+
+    private static void rangeFunction() {
+        IntStream.range(1, 15 +1).forEach(System.out::println);
+        System.out.println();
+    }
+
+    private static void sumFunction() {
+        System.out.println(IntStream.range(1, 20 +1).sum());
+        System.out.println();
+    }
+
+    private static void mapFunction() {
+        Arrays.stream(new int[] {5, 10, 15, 20, 25}).map(x -> x + x).average().ifPresent(System.out::println);
+        System.out.println();
+    }
+
+    private static void filterFunction() {
+        List<String> plants = Arrays.asList("Cactus", "Rose", "Columbine", "Camellia", "Jade Plant");
+        plants.stream().map(String::toLowerCase).filter(x -> x.startsWith("c")).forEach(System.out::println);
+        System.out.println();
+    }
+
+    private static void reduceFunction() {
+        int total = Stream.of(12, 6, 11, 13).reduce(0, Integer::sum);
+        System.out.println("Total = " + total);
+    }
+
+    private static void streamTextFileFunction() {
+    }
+
+    private static void streamCSVFileFunction() {
+    }
+
+    private static void streamCSVFileFunction2() {
+    }
+
+    private static void anyMatchFunction() {
+    }
+
+    private static void allMatchFunction() {
+    }
+
+    private static void collectFunction() {
+    }
 }

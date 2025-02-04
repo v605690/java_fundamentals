@@ -3,7 +3,6 @@ package labs_examples.lambdas.labs;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.Comparator;
 
 
 /**
@@ -35,7 +34,7 @@ class CapitalizeUtils {
 
 @FunctionalInterface
 interface MyMonitor {
-    Monitor get(String str);
+    Monitor get(String name);
 }
 
 class Monitor {
