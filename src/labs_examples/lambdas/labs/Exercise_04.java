@@ -1,10 +1,13 @@
 package labs_examples.lambdas.labs;
 
 import java.io.IOException;
+import java.net.URI;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -32,7 +35,7 @@ import java.util.stream.Stream;
  */
 
 class Example {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         rangeFunction();
         sumFunction();
         mapFunction();
@@ -72,21 +75,59 @@ class Example {
         System.out.println("Total = " + total);
     }
 
-    private static void streamTextFileFunction() {
+    private static void streamTextFileFunction() throws IOException {
+        String dataFile = "src/labs_examples/lambdas/labs/Data.txt";
+        Stream<String> data = Files.lines(Paths.get(dataFile));
+
+        data.filter(x -> x.contains("The Stream API")).forEach(System.out::println);
+
+        data.close();
+        System.out.println();
+
     }
 
-    private static void streamCSVFileFunction() {
+    private static void streamCSVFileFunction() throws IOException {
+        String dataFile = "src/labs_examples/lambdas/labs/stream_text_lab.csv";
+        Stream<String> data = Files.lines(Paths.get(dataFile));
+
+        data
+                .map(x -> x.split(","))
+                .forEach(x -> System.out.println(x[1]));
+        data.close();
+        System.out.println();
     }
 
-    private static void streamCSVFileFunction2() {
+    private static void streamCSVFileFunction2() throws IOException {
+        String dataFile = "src/labs_examples/lambdas/labs/stream_text_lab.csv";
+        Stream<String> data = Files.lines(Paths.get(dataFile));
+
+        data
+                .map(x -> x.split(","))
+                .forEach(x -> System.out.println(x[2]));
+        data.close();
+        System.out.println();
     }
 
-    private static void anyMatchFunction() {
+    private static void anyMatchFunction() throws IOException {
+        String StringbandsFile = "src/labs_examples/lambdas/labs/bands.txt";
+
+        boolean bands = Files.lines(Paths.get(StringbandsFile)).anyMatch(name -> name.contains("."));
+        System.out.println(bands);
+        System.out.println();
     }
 
-    private static void allMatchFunction() {
+    private static void allMatchFunction() throws IOException {
+        String StringbandsFile2 = "src/labs_examples/lambdas/labs/TheKillers.txt";
+
+        boolean bands = Files.lines(Paths.get(StringbandsFile2)).allMatch(name -> name.startsWith("The Killers"));
+        System.out.println(bands + ": file entry point does start with that name");
+        System.out.println();
     }
 
-    private static void collectFunction() {
+    private static void collectFunction() throws IOException {
+        String StringbandsFile = "src/labs_examples/lambdas/labs/bands.txt";
+
+        List<String> bands = Files.lines(Paths.get(StringbandsFile)).sorted().filter(x -> x.contains("The")).toList();
+        bands.forEach(System.out::println);
     }
 }

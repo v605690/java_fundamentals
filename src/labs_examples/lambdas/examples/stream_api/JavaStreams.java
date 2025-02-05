@@ -110,7 +110,7 @@ public class JavaStreams {
                 .collect(Collectors.toList());
 
         bands2.forEach(x -> System.out.println(x));
-        //bands2.close();
+        //TheKillers.txt.close();
 
 
         // 10. Stream rows from CSV file and count

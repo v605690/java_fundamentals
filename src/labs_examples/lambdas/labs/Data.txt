@@ -1,0 +1,6 @@
+The Stream API provides you with a very useful ability to stream (aka iterate) over a Collection of elements while simultaneously
+processing these elements.
+
+You can think of it the same way you would iterate over a Collection using a forEach loop. The Stream API simply implements the
+iteration process for us. In addition, while streaming (iterating), you can process the Collection of elements in any number of ways.
+The Stream API is built with extensive support for lambda expressions and method references.
