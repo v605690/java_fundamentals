@@ -39,3 +39,22 @@
  *
  *
  */
+
+USE college;
+SELECT * FROM students;
+
+SELECT * FROM teachers;
+SELECT * FROM teachers WHERE subject = "math";
+
+SELECT * FROM students;
+SELECT s.first_name, t.first_name, t.last_name, t.subject
+FROM college.students s
+JOIN college.teachers t;
+
+UPDATE college.students
+SET first_name = "levi", age = 22
+WHERE id = 104;
+
+INSERT INTO college.teachers (first_name, last_name, subject)
+VALUES ('ryan', 'desmond', 'java');
+

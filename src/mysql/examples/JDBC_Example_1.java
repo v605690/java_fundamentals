@@ -19,7 +19,7 @@ public class JDBC_Example_1 {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             String connectionString = "jdbc:mysql://localhost/college?"
-                    + "user=<YOUR_MYSQL_USERNAME>&password=<YOUR_MYSQL_PASSWORD>"
+                    + "user=root&password=K3yst0n3!!"
                     + "&useSSL=false&allowPublicKeyRetrieval=true";
 
             // Setup the connection with the DB
@@ -38,7 +38,7 @@ public class JDBC_Example_1 {
                 // get the id, name and units fields from the result set and assign them to local variables
                 int id = resultSet.getInt("id");
                 String name = resultSet.getString("name");
-                int units = resultSet.getInt("credits");
+                int units = resultSet.getInt("units");
 
                 // print out the result
                 System.out.println("Course ID: " + id + " is " + name + " and has " + units + units);
