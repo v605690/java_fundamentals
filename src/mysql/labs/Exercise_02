@@ -26,3 +26,44 @@
 *   In the next exercise, we'll dig into querying this database.
 *
 */
+
+Tables:
+Airlines:
+airline_id (Primary Key)
+airline_name
+
+Destinations:
+destination_id (Primary Key)
+city
+country
+airport_code
+
+Planes:
+plane_id (Primary Key)
+plane_model
+capacity
+airline_id (Foreign Key referencing Airlines.airline_id)
+
+Flights:
+flight_id (Primary Key)
+departure_destination_id (Foreign Key referencing Destinations.destination_id)
+arrival_destination_id (Foreign Key referencing Destinations.destination_id)
+plane_id (Foreign Key referencing Planes.plane_id)
+departure_time
+arrival_time
+flight_status ("scheduled", "departed", "arrived", "cancelled")
+
+Passengers:
+passenger_id (Primary Key)
+first_name
+last_name
+email
+phone_number
+
+Tickets:
+ticket_id (Primary Key)
+passenger_id (Foreign Key referencing Passengers.passenger_id)
+flight_id (Foreign Key referencing Flights.flight_id)
+seat_number
+ticket_price
+ticket_type ("economy", "business")
