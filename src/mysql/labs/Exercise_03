@@ -5,16 +5,111 @@
 *   Now that you have your air travel database all set up and populated, please demonstrate how to:
 *
 *       1.) Query all flights on a specific day
+            SELECT * FROM airTravelDB.flights;
+
 *       2.) Query all flights between two specific cities on a specific day
+            USE airTravelDB;
+            SELECT * FROM airTravelDB.flights;
+            SELECT f.flight_id, f.departure_time, d.city
+            FROM flights f
+            JOIN destinations d
+            ON d.destination_id = f.destination_id
+            WHERE f.departure_time = "2025-02-27 20:10:54"
+            AND f.flight_id >= 15;
+
 *       3.) Query all passengers on a specific flight between two specific cities today
+            *Need to review store procedures*
+
+            USE airTravelDB;
+            SELECT * FROM passengers p
+            JOIN flights f
+            ON f.flight_id = p.flight_id
+            WHERE p.flight_id = 14 AND f.departure_time BETWEEN curdate() AND curdate() + INTERVAL 1 day;
+
 *       4.) Query the flight information for a specific passenger on a specific flight
+            USE airTravelDB;
+            SELECT * FROM airTravelDB.flights;
+            SELECT p.first_name, f.flight_id, f.flight_status
+            FROM passengers p
+            JOIN flights f
+            ON f.flight_id = p.flight_id
+            WHERE f.flight_id = "10";
+
 *       5.) Query the passenger information for a specific user on a specific flight yesterday
+            USE airTravelDB;
+            SELECT * FROM airTravelDB.passengers;
+            SELECT p.first_name, p.last_name, f.flight_id, f.flight_status, f.departure_time
+            FROM passengers p
+            JOIN flights f
+            ON f.flight_id = p.flight_id
+            WHERE p.first_name = "susan"
+
 *       6.) Query the number of flights between two specific cities this week, month, and year
+            USE airTravelDB;
+            SELECT * FROM airTravelDB.flights;
+            SELECT f.flight_id, f.flight_status, f.departure_time, d.city
+            FROM flights f
+            JOIN destinations d
+            ON f.destination_id = d.destination_id
+            WHERE d.destination_id >= 6;
+
 *       7.) Query the number of passengers that travelled between two specific cities today, this week, month and year
+            USE airTravelDB;
+            SELECT * FROM airTravelDB.passengers;
+            SELECT p.first_name, p.last_name, d.city
+            FROM passengers p
+            JOIN destinations d
+            ON p.destination_id = d.destination_id
+            WHERE d.destination_id >= 6;
+
 *       8.) Insert records for new flights between airports
+            SELECT * FROM airTravelDB.flights;
+            SET FOREIGN_KEY_CHECKS=0;
+            INSERT INTO flights (flight_id, destination_id, plane_id, departure_time, arrival_time, flight_status)
+            VALUES (17, 8, 1008, '2025-02-28 08:00:00', '2025-02-28 08:00:00', 'scheduled');
+
 *       9.) Insert records for new tickets and passengers on specific flights
+
+            SELECT * FROM airTravelDB.tickets;
+            SET FOREIGN_KEY_CHECKS=0;
+            INSERT INTO tickets (ticket_id, passenger_id, seat_number, ticket_price, ticket_type)
+            VALUES (13, 108, 'F1A', 950, 'business');
+
+            SELECT * FROM airTravelDB.passengers;
+            SET FOREIGN_KEY_CHECKS=0;
+            INSERT INTO passengers (passenger_id, flight_id, destination_id, first_name, last_name, email, phone_number)
+            VALUES (108, 121, 9, 'chris', 'peters', 'cpeters@gmail.com', 3462123465);
+
 *       10.) Update meal preference (or something similar) for a specific passenger on a specific flight
 *       Bonus: Have some fun - get creative - what else can you do? Flex those SQL muscles and show us what
 *           you've got! :)
+
+        SELECT * FROM airTravelDB.tickets;
+        SET FOREIGN_KEY_CHECKS=0;
+        UPDATE tickets
+        SET ticket_type = 'business'
+        WHERE ticket_id = 5;
+
+        SELECT * FROM airTravelDB.tickets;
+        SET FOREIGN_KEY_CHECKS=0;
+        UPDATE tickets
+        SET ticket_type = 'business'
+        WHERE ticket_id = 6;
 *
 */
+Foreign Key
+create the data column but do not add constraints
+destination_fk -> destinations -> destination_id -> destination_id
+RESTRICT
+CASCADE
+Update the column values
+Add the constraint to the column
+
+SELECT p.name, p.dob, p.address
+FROM person p
+JOIN passenger pa ON p.person_id = pa.person_id
+JOIN ticket t ON pa.passenger_id = t.passenger_id
+WHERE t.flight_num = 'specific_flight_number'
+AND t.departure_time >= CURDATE()
+AND t.origin = 'specific_origin_city'
+AND t.destination = 'specific_destination_city';

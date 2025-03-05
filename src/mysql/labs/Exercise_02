@@ -28,6 +28,7 @@
 */
 
 Tables:
+-----------------------------------------------------------------------------------
 Airlines:
 airline_id (Primary Key)
 airline_name
@@ -46,9 +47,7 @@ airline_id (Foreign Key referencing Airlines.airline_id)
 
 Flights:
 flight_id (Primary Key)
-departure_destination_id (Foreign Key referencing Destinations.destination_id)
-arrival_destination_id (Foreign Key referencing Destinations.destination_id)
-plane_id (Foreign Key referencing Planes.plane_id)
+plane_id
 departure_time
 arrival_time
 flight_status ("scheduled", "departed", "arrived", "cancelled")
@@ -62,8 +61,8 @@ phone_number
 
 Tickets:
 ticket_id (Primary Key)
-passenger_id (Foreign Key referencing Passengers.passenger_id)
-flight_id (Foreign Key referencing Flights.flight_id)
+passenger_id
+passenger_fk (foreign key passengers to passenger_id)
 seat_number
 ticket_price
 ticket_type ("economy", "business")
