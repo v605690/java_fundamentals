@@ -60,7 +60,6 @@ class Parse_CSV {
     }
 }
 
-
 class FoodInventory {
     private String food;
     private String category;
@@ -121,13 +120,12 @@ class FoodInventory {
 
     @Override
     public String toString() {
-        return "FoodInventory{" +
+        return "FoodInventory" + " " +
                 "food='" + food + '\'' +
                 ", category='" + category + '\'' +
                 ", weight='" + weight + '\'' +
                 ", price=" + price +
-                ", date='" + date + '\'' +
-                '}';
+                ", date='" + date + '\'';
     }
 }
 

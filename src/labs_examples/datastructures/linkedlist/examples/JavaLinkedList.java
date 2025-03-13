@@ -1,3 +1,5 @@
+package labs_examples.datastructures.linkedlist.examples;
+
 import java.util.LinkedList;
 
 public class JavaLinkedList {
