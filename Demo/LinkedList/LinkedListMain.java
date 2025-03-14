@@ -14,6 +14,7 @@ public class LinkedListMain {
         myLinkedList.addFront("Hello");
         myLinkedList.addEnd("World");
         myLinkedList.addEnd("Yay!!!");
+
         myLinkedList.print();
 
         myLinkedList.remove("Yay!!!");
