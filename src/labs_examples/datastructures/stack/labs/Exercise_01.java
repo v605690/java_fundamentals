@@ -10,7 +10,7 @@ import java.util.LinkedList;
  */
 
 class CustomStackDemo<P> {
-    LinkedList<P> linkedList = new LinkedList();
+    private LinkedList<P> linkedList = new LinkedList();
 
     public void push(P item) {
         linkedList.addFirst(item);
