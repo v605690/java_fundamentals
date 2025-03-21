@@ -8,7 +8,8 @@ class SwitchDemo {
         for(i=0; i<10; i++)
             switch(i) {
 
-                case 0:   System.out.println("i is zero");
+                case 0:
+                    System.out.println("i is zero");
                     break;
                 case 1:
                     System.out.println("i is one");
