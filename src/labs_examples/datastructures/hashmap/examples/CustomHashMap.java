@@ -230,3 +230,11 @@ public class CustomHashMap<K, V> {
         this.value = value;
     }
 }
+
+class hashController {
+    public static void main(String[] args) {
+        CustomHashMap<String, Long> map = new CustomHashMap<>();
+
+        map.get("Tom");
+    }
+}
