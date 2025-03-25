@@ -6,10 +6,9 @@ public class HashMapNode<K, V> {
     K key;
     V value;
     HashMapNode<K, V> next;
-    HashMapNode<K, V> head;
 
     public void HashMap() {
-        this.head = null;
+        this.next = null;
     }
 
     public HashMapNode(K key, V value) {

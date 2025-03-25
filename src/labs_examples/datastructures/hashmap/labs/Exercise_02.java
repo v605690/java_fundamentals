@@ -1,5 +1,7 @@
 package labs_examples.datastructures.hashmap.labs;
 
+import com.sun.jdi.Value;
+
 /**
  *      HashMaps Exercise_02
  *
@@ -32,15 +34,23 @@ class MyHashMapController {
     map.put("Lisa", 9334567878L);
     map.put("Ryan", 8234567878L);
     map.put("Kim", 4234567878L);
-//    map.put("Nick", 9234567878L);
-//    map.put("Saul", 6234567878L);
-//    map.put("Tom", 2234567878L);
-//    map.put("Mike", 7234567878L);
+    map.put("Nick", 9234567878L);
+    map.put("Saul", 6234567878L);
+    map.put("Tom", 2234567878L);
+    map.put("Mike", 7234567878L);
+    map.put("Mike", 7234567878L);
+    map.put("Lary", 7124567878L);
+    map.put("Maria", 3444567878L);
+    map.put("Jason", 6114567878L);
+    map.put("Jessica", 8444567878L);
+    map.put("Jenifer", 9154567878L);
 
     System.out.println(map.get("John"));
+    System.out.println(map.check("John"));
     System.out.println((map.get("Lisa")));
-    System.out.println(map.get("Mary"));
+    System.out.println(map.get("Mary") == null ? "The element does not exist" : map.get ("Mary"));
     System.out.println(map.values().printList());
+    System.out.println(map.values().size());
 
     }
 }

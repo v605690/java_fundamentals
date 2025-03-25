@@ -12,19 +12,22 @@ public class HashMap<K, V> {
         return index;
     }
     public void put(K key, V value) {
+        if (this.get(key) != null) {
+            return;
+        }
         int index = harsher(key);
 
         if (data[index] == null) {
             data[index] = new HashMapNode<>(key, value);
 
         } else {
+                                                         // At Data[9] we have at index 9 -> (9: [John] -> null)
+            HashMapNode<K, V> newNode = new HashMapNode<>(key, value); // We create a new node [Nick] -> null
+            newNode.next = data[index]; // Assign old head to tail of newNode [Nick] -> [John] -> null
+            data[index] = newNode; // Data[index] is the newNode which is [Nick]
 
-            HashMapNode<K, V> newNode = data[index];
-
-            newNode.next = newNode.head;
-            newNode.head = newNode;
         }
-        if (values().size() > data.length * .75) {
+        if (values().size() > data.length * .60) {
             resize();
         }
     }
@@ -32,7 +35,7 @@ public class HashMap<K, V> {
     private void resize() {
         HashMapNode<K, V>[] old = data;
 
-        data = new HashMapNode[old.length * 2];
+        data = new HashMapNode[old.length * 3];
 
         for (int i = 0; i < old.length; i++) {
             try {
@@ -70,18 +73,27 @@ public class HashMap<K, V> {
         int index = harsher(key);
 
         if (data[index] == null) {
-           return null;
+            //System.out.println("The item does not exist");
+            return null;
         }
         HashMapNode<K, V> entryObject = data[index];
 
         while (entryObject.getKey() != key) {
             if (entryObject.next == null) {
-
-                return (V) "The object does not exist";
+                //System.out.println("The object does not exist");
+                return null;
             }
             entryObject = entryObject.next;
         }
         return entryObject.getValue();
+    }
+
+    public Object check(K key) {
+        int index = harsher(key);
+        if (data[index].key.equals(key)) {
+
+        }
+        return "No valid keys exist";
     }
 }
 
