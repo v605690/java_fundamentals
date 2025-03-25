@@ -88,12 +88,16 @@ public class HashMap<K, V> {
         return entryObject.getValue();
     }
 
-    public Object check(K key) {
+    public Object checkKeys(K key) {
         int index = harsher(key);
-        if (data[index].key.equals(key)) {
 
+        if (data[index] == null) {
+            return "Key does not exist";
+        } else if (data[index].key.equals(key)) {
+
+            return data[index].key;
         }
-        return "No valid keys exist";
+            return "Key does not exist";
     }
 }
 
