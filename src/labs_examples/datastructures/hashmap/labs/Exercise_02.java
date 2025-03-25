@@ -49,6 +49,7 @@ class MyHashMapController {
     System.out.println(map.get("Mary") == null ? "The element does not exist" : map.get ("Mary"));
     System.out.println(map.values().printList());
     System.out.println(map.values().size());
+    System.out.println(map.containsKey("Jessica"));
 
     }
 }

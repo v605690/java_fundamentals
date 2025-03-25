@@ -1,7 +1,5 @@
 package labs_examples.datastructures.hashmap.labs;
 
-//import java.util.LinkedList;
-
 @SuppressWarnings("ALL")
 public class HashMap<K, V> {
     private HashMapNode<K, V>[] data = new HashMapNode[10];
@@ -11,6 +9,7 @@ public class HashMap<K, V> {
 
         return index;
     }
+
     public void put(K key, V value) {
         if (this.get(key) != null) {
             return;
@@ -21,7 +20,7 @@ public class HashMap<K, V> {
             data[index] = new HashMapNode<>(key, value);
 
         } else {
-                                                         // At Data[9] we have at index 9 -> (9: [John] -> null)
+            // At Data[9] we have at index 9 -> (9: [John] -> null)
             HashMapNode<K, V> newNode = new HashMapNode<>(key, value); // We create a new node [Nick] -> null
             newNode.next = data[index]; // Assign old head to tail of newNode [Nick] -> [John] -> null
             data[index] = newNode; // Data[index] is the newNode which is [Nick]
@@ -66,7 +65,7 @@ public class HashMap<K, V> {
                 }
             }
         }
-    return values;
+        return values;
     }
 
     public V get(K key) {
@@ -87,17 +86,8 @@ public class HashMap<K, V> {
         }
         return entryObject.getValue();
     }
+    public boolean containsKey(K key) {
 
-    public Object checkKeys(K key) {
-        int index = harsher(key);
-
-        if (data[index] == null) {
-            return "Key does not exist";
-        } else if (data[index].key.equals(key)) {
-
-            return data[index].key;
-        }
-            return "Key does not exist";
+        return get(key) != null;
     }
 }
-
