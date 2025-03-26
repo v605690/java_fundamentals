@@ -1,5 +1,10 @@
 package labs_examples.datastructures.queue.labs;
 
+import java.util.Arrays;
+import java.util.Objects;
+
+import static java.util.Locale.filter;
+
 /**
  *      Queues - Exercise_02
  *
@@ -17,6 +22,7 @@ package labs_examples.datastructures.queue.labs;
  *
  */
 
+@SuppressWarnings("ALL")
 class GenericQueue<P> {
     private P[] array;
     private int first;
@@ -34,6 +40,14 @@ class GenericQueue<P> {
         return array.length;
     }
 
+    public int capacity() {
+        return array.length;
+    }
+
+    public void resize(int newSize) {
+        array = Arrays.copyOf(array, newSize);
+    }
+
     public P peakFirst() {
         return array[first];
     }
@@ -46,10 +60,19 @@ class GenericQueue<P> {
         array[++end] = item;
     }
 
-    public void enQueue(P item) {
+    public P enQueue(P item) {
         array[end] = item;
         end = (end + 1) % array.length;
         size++;
+
+        if (size < array.length * 0.25) {
+            resize(capacity());
+        } else {
+            if (size > array.length * .75) {
+                resize(array.length * 2);
+            }
+        }
+        return item;
     }
 
     public P dequeue() {
@@ -60,13 +83,13 @@ class GenericQueue<P> {
     }
 
     public void printQueue() {
-            for (int i = first; i <= end; i++) {
-                System.out.println(i + " " + array[i]);
+        int i = 0;
+        for (P str : array) {
+            if (str != null) {
+                System.out.println(i++ + " " + str);
             }
-            System.out.println(end);
-
+        }
     }
-
 }
 
 
@@ -74,19 +97,29 @@ class GenericQueueController {
     public static void main(String[] args) {
         GenericQueue<String> arr = new GenericQueue<>(10);
 
-        arr.add("Water");
-        arr.add("Milk");
-        arr.add("Bread");
-        arr.add("Chicken");
-        arr.add("pasta");
-        //arr.printArray();
-        System.out.println("---------------------------------");
+        arr.enQueue("Water");
+        arr.enQueue("Milk");
+        arr.enQueue("Bread");
+        arr.enQueue("Chicken");
+        arr.enQueue("pasta");
         arr.enQueue("Orange Juice");
         arr.enQueue("Butter");
+        arr.enQueue("Bacon");
+        arr.enQueue("Eggs");
+        arr.enQueue("Sausage");
+        arr.enQueue("Pancake Flour");
+        arr.enQueue("Potatoes");
+        arr.enQueue("Syrup");
+
+        System.out.println("---------------------------------");
         arr.printQueue();
+        System.out.println("---------------------------------");
         System.out.println(arr.size());
+        System.out.println("---------------------------------");
         System.out.println(arr.peakFirst());
+        System.out.println("---------------------------------");
         System.out.println(arr.peakLast());
+        System.out.println("---------------------------------");
         System.out.println(arr.dequeue());
     }
 }

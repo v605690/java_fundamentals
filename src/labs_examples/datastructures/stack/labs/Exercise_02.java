@@ -1,5 +1,7 @@
 package labs_examples.datastructures.stack.labs;
 
+import java.util.Arrays;
+
 /**
  *      Stacks - Exercise_02
  *
@@ -32,6 +34,13 @@ class StackArrayDemo<P> {
 
     public void push(P item) {
         array[++first] = item;
+            if(size() < array.length * 0.25) {
+                resize(setCapacity());
+        } else {
+        if (size() > array.length * .75) {
+            resize(array.length * 2);
+            }
+        }
     }
 
     public P pop() {
@@ -40,8 +49,16 @@ class StackArrayDemo<P> {
         return array[first];
     }
 
+    public int setCapacity() {
+        return capacity * array.length;
+    }
+
     public int size() {
         return array.length;
+    }
+
+    public void resize(int newSize) {
+        array = Arrays.copyOf(array, newSize);
     }
 
     public P peakFirst() {
@@ -56,8 +73,13 @@ class StackArrayDemo<P> {
 //        for (P item : array) {
 //            System.out.println(item + " ");
 //        }
-        for (int i = 0; i < first; i++) {
-            System.out.println(i + " " + array[i]);
+
+        String[] newArray = new String[array.length];
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] != null) {
+                newArray[i] = (String) array[i];
+            }
+            System.out.println(i + " " + newArray[i]);
         }
         System.out.println();
     }
@@ -72,12 +94,17 @@ class StackArrayDemo<P> {
         arr.push("almonds");
         arr.push("pecans");
         arr.push("cashews");
+        arr.push("peanuts");
+        arr.push("hazelnuts");
+        arr.push("macadamia nuts");
+        arr.push("pine nuts");
+        arr.push("sunflower seeds");
 
+        arr.printArray();
         System.out.println(arr.peakFirst());
         System.out.println(arr.peakLast());
         System.out.println();
         System.out.println(arr.pop());
-        arr.printArray();
         System.out.println(arr.pop());
         arr.printArray();
         System.out.println(arr.pop());
