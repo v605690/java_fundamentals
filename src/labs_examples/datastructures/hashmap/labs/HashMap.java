@@ -31,6 +31,31 @@ public class HashMap<K, V> {
         }
     }
 
+    public void remove(K key) {
+        if (get(key) == null) {
+            return;
+        }
+        int index = harsher(key);
+
+        HashMapNode<K, V> hashMapNode = data[index];
+
+        if (hashMapNode.getKey().equals(key)) {
+            data[index] = null;
+        }
+
+        while (hashMapNode.next != null) {
+            if (hashMapNode.next.getKey() != key) {
+                hashMapNode = hashMapNode.next;
+            }
+        }
+
+        if (hashMapNode.next.next != null) {
+            hashMapNode.next = hashMapNode.next.next;
+        } else {
+            hashMapNode.next = null;
+        }
+    }
+
     private void resize() {
         HashMapNode<K, V>[] old = data;
 
