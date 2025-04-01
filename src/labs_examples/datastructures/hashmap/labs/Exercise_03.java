@@ -27,72 +27,81 @@ import java.util.Stack;
 
 class megaDTS {
     public static void main(String[] args) {
+        int m = 100;
 
-        long beforeTimer = System.currentTimeMillis();
-        Timestamp ts1 = new Timestamp(beforeTimer);
-        System.out.println(ts1);
+        long dsTimer = System.currentTimeMillis();
+        Timestamp bllt = new Timestamp(dsTimer);
+        System.out.println(bllt);
 
         LinkedList<String> linkedList = new LinkedList<>();
 
-        for (int i = 0; i < 100; i++) {
-            linkedList.add(" LinkList");
-            linkedList.add(" Data\n" + i);
-//            try {
-//                Thread.sleep(300);
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            }
+        System.out.println("-------------LinkList-------------");
+
+        for (int i = 1; i <= m; i++) {
+            linkedList.add("Data " + i);
         }
+
+        System.out.println(linkedList.size());
 
         StringBuilder sb = new StringBuilder();
         for (String str : linkedList) {
-            sb.append(str);
+            sb.append("Linklist " + str + "\n");
         }
         String combinedString = sb.toString();
         System.out.println(combinedString);
 
-        for (int i = 0; i < 100; i++) {
-            linkedList.set(i, " Updated LinkListed Data\n" + i);
+        System.out.println(linkedList.get(97));
+        System.out.println(linkedList.indexOf("Data 98"));
 
+        System.out.println("-----------------------------------------------------");
+
+        for (int i = 1; i < m; i++) {
+            linkedList.set(i, "Data Updated " + i);
         }
 
         StringBuilder sb2 = new StringBuilder();
         for (String str : linkedList) {
-            sb2.append(str);
+            sb2.append("LinkedList " + str + "\n");
         }
+
         String combinedString2 = sb2.toString();
         System.out.println(combinedString2);
 
-        long afterTimer = System.currentTimeMillis();
-        Timestamp ts2 = new Timestamp(afterTimer);
-        System.out.println(ts2);
+        Timestamp allt = new Timestamp(dsTimer);
+        System.out.println(allt);
 
-        var contains = linkedList.contains("New");
+        var contains = linkedList.contains("Data Updated 90");
         System.out.println(contains);
-        System.out.println("----------------------");
+        System.out.println();
+
         Stack<String> demoStack = new Stack<>();
+        System.out.println("----------Stack-----------");
+
+        Timestamp bst = new Timestamp(dsTimer);
+        System.out.println(bst);
 
         if (demoStack.empty()) {
-            System.out.println("Stack is empty");
-        for (int i = 0; i < 100 + 1; i++) {
-            demoStack.push(i + " Loaded");
-            demoStack.push(" Stack");
-            demoStack.push(" Data\n");
+            System.out.println("Stack data is empty");
+        for (int i = 1; i < m + 1; i++) {
+            demoStack.push(i + " Stack Data");
         }
 
         StringBuilder sb3 = new StringBuilder();
         for (String str : demoStack) {
-            sb3.append(str);
+            sb3.append("Loaded " + str + "\n");
         }
         String combinedString3 = sb3.toString();
         System.out.println(combinedString3);
         }
 
-        var results = (demoStack.equals(" Stack Data\n"));
+        Timestamp ast = new Timestamp(dsTimer);
+        System.out.println(ast);
+
+        var results = (demoStack.equals("Stack Data"));
         System.out.println(results);
 
         for (String str : demoStack) {
-            System.out.println(str);
+            System.out.println("Adding " + str);
         }
         demoStack.clear();
 
@@ -103,24 +112,30 @@ class megaDTS {
         }
         System.out.println("Stack Empty");
 
-        System.out.println("-----------------------------");
+        System.out.println("-----------------------------------------------------------------");
+
+        Timestamp bht = new Timestamp(dsTimer);
+        System.out.println(bht);
 
         HashMap<String, Integer> dataDog = new HashMap<>();
+        System.out.println("------------HashMap------------------");
 
-        if (demoStack.empty()) {
-            System.out.println("Stack is empty");
-            for (int i = 0; i < 100 + 1; i++) {
-                dataDog.put("dog", 4);
-                demoStack.push(" Stack");
-                demoStack.push(" Data\n");
+        if (dataDog.isEmpty()) {
+            System.out.println("Hashmap is empty");
+
+            for (int i = 0; i < m + 1; i++) {
+                dataDog.put("Dog Breed - " + i, 1);
             }
 
-            StringBuilder sb3 = new StringBuilder();
-            for (String str : demoStack) {
-                sb3.append(str);
+            StringBuilder sb4 = new StringBuilder();
+            for (String str : dataDog.keySet()) {
+                sb4.append("American Kennel Club " + str + "\n");
             }
-            String combinedString3 = sb3.toString();
-            System.out.println(combinedString3);
+            String combinedString4 = sb4.toString();
+            System.out.println(combinedString4);
+
+            Timestamp aht = new Timestamp(dsTimer);
+            System.out.println(aht);
         }
     }
 }
