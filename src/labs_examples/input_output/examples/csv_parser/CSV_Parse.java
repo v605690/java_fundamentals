@@ -14,8 +14,6 @@ public class CSV_Parse {
 
         String filePath = "src/labs_examples/input_output/files/students.csv";
 
-
-
         try (BufferedReader br =
                      new BufferedReader(new FileReader(filePath))) {
 

@@ -64,31 +64,111 @@ public class PravinBST {
         } else {
             return cNode;
         }
-        return null; //rebalanceInsert(cNode, item);
+        return rebalanceInsert(cNode, item);
     }
 
-//    private Node rebalanceInsert(Node cNode, int item) {
-//
-//        int leftHeight = height(cNode.leftChild);
-//        int rightHeight = height(cNode.rightChild);
-//
-//        cNode.height = 1 + Math.max(leftHeight, rightHeight);
-//
-//        int balnode = leftHeight - rightHeight;
-//
-//        if (balnode > 1 && item < cNode.leftChild.item) {
-//            return rotateRight(cNode);
-//        }
-//    }
-//
-//    private Node rotateRight(Node cNode) {
-//
-//    }
+    private Node rebalanceInsert(Node cNode, int item) {
+
+        int leftHeight = height(cNode.leftChild);
+        int rightHeight = height(cNode.rightChild);
+
+        cNode.height = 1 + Math.max(leftHeight, rightHeight);
+
+        int balnode = leftHeight - rightHeight;
+
+        if (balnode > 1 && item < cNode.leftChild.item) {
+            return rotateRight(cNode);
+        }
+        if (balnode < - 1 && item > cNode.rightChild.item) {
+            return rotateLeft(cNode);
+        }
+        if (balnode > 1 && item > cNode.leftChild.item) {
+            cNode.leftChild = rotateLeft(cNode.leftChild);
+            return rotateRight(cNode);
+        }
+
+        if (balnode < -1 && item < cNode.rightChild.item) {
+            cNode.rightChild = rotateRight(cNode.rightChild);
+
+            return rotateLeft(cNode);
+        }
+        return cNode;
+    }
+
+    private Node rotateLeft(Node cNode) {
+        Node child = cNode.rightChild;
+
+        Node grandChild = child.leftChild;
+
+        child.leftChild = cNode;
+        cNode.rightChild = grandChild;
+
+        int leftHeight = height(cNode.leftChild);
+        int rightHeight = height(cNode.rightChild);
+
+        cNode.height = 1 + Math.max(leftHeight, rightHeight);
+
+        leftHeight = height(child.leftChild);
+        rightHeight = height(child.rightChild);
+
+        child.height = 1 + Math.max(leftHeight, rightHeight);
+
+        cNode = child;
+        return cNode;
+    }
+
+    private Node rotateRight(Node cNode) {
+        Node  child = cNode.leftChild;
+        Node oldRightChild = child.rightChild;
+
+        child.rightChild = cNode;
+        cNode.leftChild = oldRightChild;
+
+        int leftHeight = height(cNode.leftChild);
+        int rightHeight = height(cNode.rightChild);
+        cNode.height = 1 + Math.max(leftHeight, rightHeight);
+
+        leftHeight = height(child.leftChild);
+        rightHeight = height(child.rightChild);
+        child.height = 1 + Math.max(leftHeight, rightHeight);
+
+        cNode = child;
+        return cNode;
+    }
 
     private int height(Node cNode) {
         if (cNode == null) {
             return 0;
         }
         return cNode.height;
+    }
+    public Node removeNode(Node rootNode, int item) {
+        if (rootNode == null)
+            return rootNode;
+
+            if (item < rootNode.item) {
+                rootNode.leftChild = removeNode(rootNode.leftChild, item);
+            } else if (item > rootNode.item) {
+                rootNode.rightChild = removeNode(rootNode.rightChild, item);
+            } else {
+                if (rootNode.leftChild == null)
+                    return rootNode.rightChild;
+                else if (rootNode.rightChild == null)
+                    return rootNode.leftChild;
+
+                    rootNode.item = lowestChild(rootNode.rightChild);
+
+                    rootNode.rightChild = removeNode(rootNode.rightChild, rootNode.item);
+                }
+            return rootNode;
+        }
+
+    private int lowestChild(Node rightChild) {
+        int lwch = rootNode.item;
+        while (rootNode.leftChild != null) {
+            lwch = rootNode.leftChild.item;
+            rootNode = rootNode.leftChild;
+        }
+        return  lwch;
     }
 }
